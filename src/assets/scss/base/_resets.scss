@@ -1,3 +1,7 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+@import "../config.scss";
+
+body {
+    min-height: 100vh;
+    @include scrollbars(4px, #3F5CA2,$light);
+
 }

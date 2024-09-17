@@ -1,5 +1,4 @@
 @import "../assets/scss/config.scss";
 .#{$style-prefix}-app {
-    min-height: 100vh;
-    overflow-x: clip;
+    max-height: fit-content;
 }
