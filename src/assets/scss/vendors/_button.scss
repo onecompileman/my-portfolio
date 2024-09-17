@@ -1,0 +1,11 @@
+@import "../config.scss";
+
+.btn {
+    border-radius: 0;
+    width: fit-content;
+}
+
+.btn-primary {
+    background-color: $primary;
+    border: none;
+}

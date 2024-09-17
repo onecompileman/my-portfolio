@@ -36,12 +36,19 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/config.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss/config.scss" 
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -105,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

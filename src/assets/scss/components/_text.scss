@@ -1,0 +1,5 @@
+@import "../config.scss";
+
+.#{$style-prefix}-text-primary {
+    color: $primary;
+}

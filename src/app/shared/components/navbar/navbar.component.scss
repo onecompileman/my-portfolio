@@ -1,0 +1,27 @@
+@import "../../../../assets/scss/config.scss";
+
+.#{$style-prefix}-navbar {
+    background-color: $light !important;
+
+    .container-fluid {
+        max-width: 1000px;
+    }
+
+    .active {
+        color: $primary;
+        font-weight: bold;
+    }
+
+    .navbar-collapse {
+        flex-grow: unset;
+    }
+
+    .navbar-toggler {
+        &:focus {
+            outline: 0;
+            outline-color: unset;
+            box-shadow: none;
+        }
+    }
+
+}
