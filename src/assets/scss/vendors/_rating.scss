@@ -1,0 +1,9 @@
+@import "../config.scss";
+
+.bs-rating-star {
+    font-size: 30px;
+}
+
+.bs-rating-star.active {
+    color: $primary;
+}

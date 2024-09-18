@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Banner } from '../shared/models/banner.model';
+import { SkillGroup } from '../shared/models/skill.model';
+import { SkillGroups } from '../shared/data/skills.data';
 
 @Component({
   selector: 'oc-services',
@@ -19,4 +21,6 @@ export class ServicesComponent {
       active: true
     }
   ]
+  
+  skillGroups: SkillGroup[] = SkillGroups;
 }

@@ -17,6 +17,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { ServicesComponent } from './services/services.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { RatingModule } from 'ngx-bootstrap/rating';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent],
@@ -24,6 +26,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
+    RatingModule.forRoot(),
+    FormsModule,
     SharedModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
