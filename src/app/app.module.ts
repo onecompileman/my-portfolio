@@ -13,15 +13,21 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { ServicesComponent } from './services/services.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutMeComponent],
+  declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CarouselModule.forRoot(),
     SharedModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    NgxImageZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent],

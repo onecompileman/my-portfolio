@@ -1,0 +1,9 @@
+@import "../../assets/scss/config.scss";
+.#{$style-prefix}-coming-soon {
+    background-color: #f6f6f6;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px);
+}

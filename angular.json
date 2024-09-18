@@ -41,7 +41,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/scss/config.scss"
+              "src/assets/scss/config.scss",
+              "node_modules/photoswipe/dist/photoswipe.css"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {

@@ -1,7 +1,14 @@
 @import "../../assets/scss/config.scss";
 .#{$style-prefix}-about-me {
+  &__carousel {
+    width: 500px;
+    background-color: $dark1;
+    display: flex;
+    justify-content: center;
+  }
+
   &__about-me {
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     background-color: $light;
@@ -13,8 +20,8 @@
       position: absolute;
       top: 80px;
       left: -40px;
-      height: 500px;
-      width: 498px;
+      height: 400px;
+      width: 398px;
       z-index: 2;
     }
     &-image {
@@ -22,7 +29,7 @@
       position: relative;
       overflow-y: clip;
       img {
-        height: 500px;
+        height: 400px;
         z-index: 10;
         left: -26px;
         position: relative;
@@ -46,7 +53,7 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
     @media screen and (max-width: 830px) {
@@ -82,5 +89,126 @@
     }
   }
 
- 
+  &__this-is-me {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: $bg1;
+
+    &-imagebg {
+      background-image: url("../../assets/images/highlight.png");
+      background-size: auto;
+      background-size: contain;
+      position: absolute;
+      top: 80px;
+      left: -60px;
+      height: 600px;
+      width: 598px;
+      z-index: 2;
+    }
+    &-image {
+      width: 500px;
+      position: relative;
+      overflow-y: clip;
+      img {
+        height: 600px;
+        z-index: 10;
+        position: relative;
+      }
+    }
+
+    &-info {
+      margin-right: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+    }
+
+    @media screen and (max-width: 830px) {
+      .container {
+        flex-wrap: wrap;
+      }
+
+      &-info {
+        margin-right: 80px;
+        margin-left: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      &-image {
+        justify-content: center;
+        display: flex;
+
+        width: 100%;
+
+        img {
+          height: 450px;
+        }
+      }
+      &-imagebg {
+        left: unset !important;
+        height: 450px;
+        width: 450px;
+      }
+    }
+  }
+
+  &__services {
+    padding: 30px;
+    background-color: $bg1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    &-item {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__stats {
+    min-height: 200px;
+    background: rgb(119, 17, 247);
+    background: linear-gradient(
+      45deg,
+      rgba(119, 17, 247, 1) 0%,
+      rgba(45, 147, 254, 1) 100%
+    );
+    color: $light;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
