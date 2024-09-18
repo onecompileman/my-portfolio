@@ -1,0 +1,13 @@
+<div class="oc-banner">
+    <h3>
+        {{ title }}
+    </h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li *ngFor="let banner of banners" class="breadcrumb-item">
+            <a *ngIf="!banner.active" [routerLink]="banner.route">{{ banner.name }}</a>
+            <span *ngIf="banner.active">{{ banner.name }}</span>
+        </li>
+        </ol>
+      </nav>
+</div>

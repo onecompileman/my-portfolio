@@ -10,10 +10,12 @@ import { SharedModule } from './shared/shared.module';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, AboutMeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,6 +28,6 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIconPacks(far, fas);
+    library.addIconPacks(far, fas, fab);
   }
 }
