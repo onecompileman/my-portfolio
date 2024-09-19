@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Banner } from '../shared/models/banner.model';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { Project } from '../shared/models/project.model';
+import { Projects } from '../shared/data/projects.data';
 
 @Component({
   selector: 'oc-projects',
@@ -19,10 +21,13 @@ export class ProjectsComponent implements OnInit {
       route: [],
       active: true
     }
-  ]
+  ];
+  projects: Project[] = Projects;
 
   ngOnInit(): void {
-    this.initLightbox();
+    setTimeout(() => {
+      this.initLightbox();
+    }, 100)
   }
 
   private initLightbox() {

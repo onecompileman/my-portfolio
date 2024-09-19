@@ -12,224 +12,44 @@
         Libero vel ipsum nihil quae, aliquam deserunt quas, repellendus sunt
         architecto mollitia hic suscipit?
       </p>
-      <section class="oc-projects__project-item">
+      <section class="oc-projects__project-item" *ngFor="let project of projects">
         <div class="container d-flex">
-          <div class="d-flex align-items-center justify-content-center w-100">
+          <div class="d-flex align-items-center justify-content-center">
             <carousel
               class="oc-projects__carousel"
               [isAnimated]="true"
-              [interval]="9999"
+              [interval]="0"
             >
-              <slide>
+              <slide *ngFor="let image of project.images">
                 <a
                   class="slide-item"
-                  href="assets/images/talk-5-min.jpeg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1080"
+                  [href]="image.url"
+                  [attr.data-pswp-width]="image.width"
+                  [attr.data-pswp-height]="image.height"
                 >
                   <img
-                    src="assets/images/talk-5-min.jpeg"
+                    [src]="image.url"
                     alt="Profile"
-                    height="300"
+                    width="450"
                   />
                 </a>
               </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/angular-2.jpeg"
-                  data-pswp-width="4096"
-                  data-pswp-height="2073"
-                >
-                  <img
-                    src="assets/images/angular-2.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/sti-nova-2-min.jpeg"
-                  data-pswp-width="4096"
-                  data-pswp-height="2073"
-                >
-                  <img
-                    src="assets/images/sti-nova-2-min.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/talk-11-min.jpg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1080"
-                >
-                  <img
-                    src="assets/images/talk-11-min.jpg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/html5-devcon-2.jpg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1280"
-                >
-                  <img
-                    src="assets/images/html5-devcon-2.jpg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/talk-8-min.jpeg"
-                  data-pswp-width="3844"
-                  data-pswp-height="1944"
-                >
-                  <img
-                    src="assets/images/talk-8-min.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
+        
             </carousel>
           </div>
           <div class="oc-projects__project-item-info">
-            <h4>Local & International Speaker</h4>
-            <b>Lead Frontend Developer</b>
-            <span>Angular</span>
+            <h4>{{ project.name }}</h4>
+            <b>{{ project.role }}</b>
+            <span>{{ project.techs }}</span>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-              reprehenderit. Cumque optio suscipit inventore laudantium saepe
-              consequatur, molestias eveniet ipsum? Suscipit officiis id commodi cum
-              dignissimos harum, tempore accusamus facere.
+              {{ project.description }}
             </p>
           </div>
           <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
         </div>
       </section>    
-      <section class="oc-projects__project-item">
-        <div class="container d-flex">
-          <div class="d-flex align-items-center justify-content-center w-100">
-            <carousel
-              class="oc-projects__carousel"
-              [isAnimated]="true"
-              [interval]="9999"
-            >
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/talk-5-min.jpeg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1080"
-                >
-                  <img
-                    src="assets/images/talk-5-min.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/angular-2.jpeg"
-                  data-pswp-width="4096"
-                  data-pswp-height="2073"
-                >
-                  <img
-                    src="assets/images/angular-2.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/sti-nova-2-min.jpeg"
-                  data-pswp-width="4096"
-                  data-pswp-height="2073"
-                >
-                  <img
-                    src="assets/images/sti-nova-2-min.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/talk-11-min.jpg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1080"
-                >
-                  <img
-                    src="assets/images/talk-11-min.jpg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/html5-devcon-2.jpg"
-                  data-pswp-width="1920"
-                  data-pswp-height="1280"
-                >
-                  <img
-                    src="assets/images/html5-devcon-2.jpg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-              <slide>
-                <a
-                  class="slide-item"
-                  href="assets/images/talk-8-min.jpeg"
-                  data-pswp-width="3844"
-                  data-pswp-height="1944"
-                >
-                  <img
-                    src="assets/images/talk-8-min.jpeg"
-                    alt="Profile"
-                    height="300"
-                  />
-                </a>
-              </slide>
-            </carousel>
-          </div>
-          <div class="oc-projects__project-item-info">
-            <h4>Local & International Speaker</h4>
-            <b>Lead Frontend Developer</b>
-            <span>Angular</span>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-              reprehenderit. Cumque optio suscipit inventore laudantium saepe
-              consequatur, molestias eveniet ipsum? Suscipit officiis id commodi cum
-              dignissimos harum, tempore accusamus facere.
-            </p>
-          </div>
-          <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
-        </div>
-      </section>    
+    
       </div>
       </section>
 </div>

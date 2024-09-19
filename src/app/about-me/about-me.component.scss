@@ -2,9 +2,16 @@
 .#{$style-prefix}-about-me {
   &__carousel {
     width: 500px;
+    max-height: 340px;
+    overflow: hidden;
     background-color: $dark1;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 676px) {
+      width: 350px;
+    }
   }
 
   &__about-me {
@@ -56,14 +63,37 @@
       max-width: 1100px;
     }
 
+    @media screen and (max-width: 678px) {
+      img {
+        max-width: 320px;
+        height: auto;
+      }
+      &-info {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
     @media screen and (max-width: 830px) {
+      margin-top: 60px;
+      padding-left: 30px;
+      padding-right: 30px;
+
       .container {
         flex-wrap: wrap;
+       
+          div.w-100 {
+            width: unset !important;
+          }
+        
+      }
+      .container-reverse {
+        flex-wrap: wrap-reverse !important;
       }
 
       &-info {
-        margin-right: 80px;
-        margin-left: 80px;
+        margin-right: 0;
+        margin-left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -78,13 +108,15 @@
         width: 100%;
 
         img {
-          height: 450px;
+          height: 330px;
+          margin-left: 60px;
         }
       }
+
       &-imagebg {
         left: unset !important;
-        height: 450px;
-        width: 450px;
+        height: 350px;
+        width: 350px;
       }
     }
   }

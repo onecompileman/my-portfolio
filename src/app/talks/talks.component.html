@@ -1,5 +1,5 @@
 <div class="oc-talks">
-    <oc-breadcrumb-banner
+  <oc-breadcrumb-banner
     [banners]="banners"
     title="Talks"
   ></oc-breadcrumb-banner>
@@ -12,7 +12,22 @@
         Libero vel ipsum nihil quae, aliquam deserunt quas, repellendus sunt
         architecto mollitia hic suscipit?
       </p>
-      
+      <div class="container p-0">
+        <div class="oc-talks__talk-item" *ngFor="let talk of talks">
+          <h4>{{ talk.name }}</h4>
+          <div class="oc-talks__talk-images">
+            <a
+              *ngFor="let image of talk.images"
+              class="slide-item"
+              [href]="image.url"
+              [attr.data-pswp-width]="image.width"
+              [attr.data-pswp-height]="image.height"
+            >
+              <img [src]="image.url" alt="Profile" height="230" />
+            </a>
+          </div>
+        </div>
       </div>
-      </section>
+    </div>
+  </section>
 </div>
