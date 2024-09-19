@@ -6,6 +6,7 @@ import { ServicesComponent } from './services/services.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { TalksComponent } from './talks/talks.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'talks',
     component: TalksComponent,
+  },
+  {
+    path: 'contact-me',
+    component: ContactMeComponent,
   },
   {
     path: 'projects',

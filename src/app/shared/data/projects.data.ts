@@ -106,4 +106,47 @@ export const Projects: Project[] = [
         ],
         description: `Worked on developing Vote Pilipinas platform.Vote Pilipinas is the official voter information campaign partner of the Commission on Elections.`
     }
+];
+
+
+export const FeaturedProjects: Project[] = [
+   
+    {
+        name: 'Getz Clinical Platform',
+        role: 'Senior Frontend Developer',
+        techs: 'Angular 16, TypeScript, SCSS',
+        images: [
+            {
+                width: 3800,
+                height: 1806,
+                url: '/assets/images/getz-1.png'
+            },
+            {
+                width: 3840,
+                height: 1800,
+                url: '/assets/images/getz-2.png'
+            }
+        ],
+        description: `Helped developed Getz Clinical Hospital software for 2yrs. Rewrite from old ASP.NET to Angular 16 and .Net API. I'm the one responsible for converting most of the features to latest Angular and monitoring other Frontend devs progress and Pull requests.`
+    },
+    {
+        name: 'Auditmacs Ticketing Software',
+        role: 'Lead Frontend Developer',
+        techs: 'Angular 12, TypeScript, SCSS',
+        images: [
+            {
+                width: 1920,
+                height: 955,
+                url: '/assets/images/auditmacs-1.JPG'
+            },
+            {
+                width: 1920,
+                height: 956,
+                url: '/assets/images/auditmacs-2-min.JPG'
+            }
+        ],
+        description: `Helped developed Auditmacs Ticketing software for 2yrs. Responsible for setting up standards, architecting the Frontend app and leading other frontend devs. The platform is responsible for handling huge amount of records related to accounting, ticketing, employee records and schedules.`
+    },
+    
+   
 ]

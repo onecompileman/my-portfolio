@@ -1,0 +1,20 @@
+@import "../../assets/scss/config.scss";
+.#{$style-prefix}-contact-me {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 311px);
+
+    .container {
+        max-width: 1100px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        flex:1;
+    }
+
+    textarea {
+        height: 147px;
+    }
+}

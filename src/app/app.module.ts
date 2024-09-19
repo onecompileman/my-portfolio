@@ -21,9 +21,10 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { TalksComponent } from './talks/talks.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent, ProjectsComponent, TalksComponent],
+  declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent, ProjectsComponent, TalksComponent, ContactMeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

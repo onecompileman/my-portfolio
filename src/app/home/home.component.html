@@ -73,7 +73,7 @@
 
   <section class="oc-home__stats">
     <div class="oc-home__stats-item">
-        <h3 class="mb-0">150</h3>
+        <h3 class="mb-0">63</h3>
         <span>
             Projects Completed
         </span>
@@ -91,4 +91,48 @@
         </span>
     </div>
   </section>
+  <section class="oc-home__projects">
+    <h2 class="mt-5">Featured Projects</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+      blanditiis facere, fuga distinctio quia tempora sequi! 
+      architecto mollitia hic suscipit?
+    </p>
+    <div class="d-flex justify-content-center oc-home__project-container">
+        <div class="oc-home__project-item m-2" *ngFor="let project of projects">
+            <div class="container d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-center">
+                <carousel
+                  class="oc-home__carousel"
+                  [isAnimated]="true"
+                  [interval]="0"
+                >
+                  <slide *ngFor="let image of project.images">
+                    <a
+                      class="slide-item"
+                      [href]="image.url"
+                      [attr.data-pswp-width]="image.width"
+                      [attr.data-pswp-height]="image.height"
+                    >
+                      <img
+                        [src]="image.url"
+                        alt="Profile"
+                        width="480"
+                      />
+                    </a>
+                  </slide>
+            
+                </carousel>
+              </div>
+              <div class="oc-home__project-item-info">
+                <h5>{{ project.name }}</h5>
+                <b>{{ project.role }}</b>
+                <span>{{ project.techs }}</span>
+    
+              </div>
+              <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
+            </div>
+        </div>    
+    </div>
+    </section>
 </div>
