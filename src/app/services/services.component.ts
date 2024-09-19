@@ -12,7 +12,7 @@ export class ServicesComponent {
   banners: Banner[] = [
     {
       name: 'Home',
-      route: [],
+      route: ['/'],
 
     },
     {

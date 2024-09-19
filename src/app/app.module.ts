@@ -19,9 +19,11 @@ import { ServicesComponent } from './services/services.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
+import { ProjectsComponent } from './projects/projects.component';
+import { TalksComponent } from './talks/talks.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent],
+  declarations: [AppComponent, HomeComponent, AboutMeComponent, ServicesComponent, ComingSoonComponent, ProjectsComponent, TalksComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Banner } from '../shared/models/banner.model';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
 @Component({
-  selector: 'oc-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  selector: 'oc-projects',
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss'
 })
-export class AboutMeComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
   banners: Banner[] = [
     {
       name: 'Home',
@@ -14,7 +15,7 @@ export class AboutMeComponent implements OnInit {
 
     },
     {
-      name: 'About Me',
+      name: 'Projects',
       route: [],
       active: true
     }
@@ -26,7 +27,7 @@ export class AboutMeComponent implements OnInit {
 
   private initLightbox() {
     const lightbox = new PhotoSwipeLightbox({
-      gallery: '.oc-about-me__carousel',
+      gallery: '.oc-projects__carousel',
       children: '.slide-item',
       pswpModule: () => import('photoswipe')
     });
