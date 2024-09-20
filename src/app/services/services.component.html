@@ -7,38 +7,43 @@
     <div class="container d-flex flex-column">
       <h2 class="mt-5">My Offered Services</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-        blanditiis facere, fuga distinctio quia tempora sequi! <br />
-        Libero vel ipsum nihil quae, aliquam deserunt quas, repellendus sunt
-        architecto mollitia hic suscipit?
+        As a <b>Lead Angular Developer</b> with over 8 years of experience and a
+        <b>5-time Microsoft MVP</b>, <br />I offer a range of professional
+        services to help businesses and individuals excel in web development:
       </p>
       <div class="w-100 mt-4">
         <h4 class="mt-2">
           <fa-icon [icon]="['fas', 'desktop']"></fa-icon> Web Development
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          dolores, minus quos, sit ab perspiciatis corporis, cum a incidunt
-          placeat modi quod? Ducimus eaque rerum reiciendis facilis perferendis
-          cupiditate dolorem.
+          Expertise in Angular (versions 2 to 18) to deliver robust, scalable,
+          and high-performance web applications tailored to your needs. Design
+          and implement clean, maintainable code using TypeScript, JavaScript,
+          and SCSS, ensuring both aesthetics and functionality.
         </p>
         <div class="mt-4" *ngFor="let skillGroup of skillGroups">
-            <b>{{ skillGroup.groupName }}</b>
-            <div class="oc-services__skills">
-              <div class="oc-services__skill-item" *ngFor="let skill of skillGroup.skills">
-                <b>{{ skill.name }}</b>
-                <div class="d-flex">
-                  <span class="me-2">{{ skill.years }} years exp</span> |
-                  <span class="ms-2">{{ skill.projects }} Projects</span>
-                </div>
-                <div class="d-flex align-items-center">
-                  <label for="" class="me-2"> Proficiency: </label>
-                  <rating [(ngModel)]="skill.rate" [max]="5" [readonly]="true"></rating>
-                </div>
+          <b>{{ skillGroup.groupName }}</b>
+          <div class="oc-services__skills">
+            <div
+              class="oc-services__skill-item"
+              *ngFor="let skill of skillGroup.skills"
+            >
+              <b>{{ skill.name }}</b>
+              <div class="d-flex">
+                <span class="me-2">{{ skill.years }} years exp</span> |
+                <span class="ms-2">{{ skill.projects }} Projects</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <label for="" class="me-2"> Proficiency: </label>
+                <rating
+                  [(ngModel)]="skill.rate"
+                  [max]="5"
+                  [readonly]="true"
+                ></rating>
               </div>
             </div>
+          </div>
         </div>
-       
       </div>
 
       <div class="w-100 mt-5">
@@ -46,209 +51,377 @@
           <fa-icon [icon]="['far', 'file']"></fa-icon> Bootcamp Instructor
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          dolores, minus quos, sit ab perspiciatis corporis, cum a incidunt
-          placeat modi quod? Ducimus eaque rerum reiciendis facilis perferendis
-          cupiditate dolorem.
+          One of my key offerings is organizing intensive bootcamps that cater
+          to developers and teams aiming to fast-track their skills in Angular,
+          TypeScript, and modern web technologies.
         </p>
-        <ul class="list-group ">
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Angular Development From Hero to Zero (18hrs/3 days session)</div>
-                <small>
-                    Bootcamp about Angular development, focusing on concepts necessary on building a fully working Angular application with connection to a Restful API Service.
-
-                    <br> 
-                    Please reach out to me for the full course outline.
-                    
-                </small>
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Angular Development From Hero to Zero (18hrs/3 days session)
               </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Angular Reactive Programming (5hrs/1 day session)</div>
-                  <small>
-                      Bootcamp about Reactive Programming in Angular utilizing advance concepts of RxJS
-  
-                      <br> 
-                      Please reach out to me for the full course outline.
-                      
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Angular + Firebase (10hrs/2 days session)</div>
-                  <small>
-                      Bootcamp about Angular and Firebase combination on building a complete application without needing a backend framework.
-  
-                      <br> 
-                      Please reach out to me for the full course outline.
-                      
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Web Game Development (10hrs/2 days or 5hrs/1 day session)</div>
-                  <small>
-                      Bootcamp building web games using Angular or p5.Js Canvas library from scratch.
-  
-                      <br> 
-                      Please reach out to me for the full course outline and other varities.
-                      
-                  </small>
-                </div>
-              </li>
-            </ul>
-       
-    </div>
-    <div class="w-100 mt-5">
+              <small>
+                Bootcamp about Angular development, focusing on concepts
+                necessary on building a fully working Angular application with
+                connection to a Restful API Service.
+
+                <br />
+                Please reach out to me for the full course outline.
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Angular Reactive Programming (5hrs/1 day session)
+              </div>
+              <small>
+                Bootcamp about Reactive Programming in Angular utilizing advance
+                concepts of RxJS
+
+                <br />
+                Please reach out to me for the full course outline.
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Angular + Firebase (10hrs/2 days session)
+              </div>
+              <small>
+                Bootcamp about Angular and Firebase combination on building a
+                complete application without needing a backend framework.
+
+                <br />
+                Please reach out to me for the full course outline.
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Web Game Development (10hrs/2 days or 5hrs/1 day session)
+              </div>
+              <small>
+                Bootcamp building web games using Angular or p5.Js Canvas
+                library from scratch.
+
+                <br />
+                Please reach out to me for the full course outline and other
+                varities.
+              </small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="w-100 mt-5">
         <h4 class="mt-2">
-          <fa-icon [icon]="['fas', 'microphone']"></fa-icon> Speaker at events/conferences
+          <fa-icon [icon]="['fas', 'microphone']"></fa-icon> Speaker at
+          events/conferences
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          dolores, minus quos, sit ab perspiciatis corporis, cum a incidunt
-          placeat modi quod? Ducimus eaque rerum reiciendis facilis perferendis
-          cupiditate dolorem.
+          Passionate about sharing knowledge, I offer technical talks,
+          bootcamps, and workshops for teams and developers who want to elevate
+          their skills in modern web development.
         </p>
 
-        <ul class="list-group ">
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Angular + Firebase Firestore</div>
-                <small>
-                    Dicussing Angular and Firebase combination in developing a complete application without having the need of Backend. Conducted at an international <b>Cognizant event</b>
-                    <br><b>International Event Link:</b> <a href="https://www.youtube.com/watch?v=gVwBOBXCpEs&t=4s" target="_blank"> Youtube video</a>
-                </small>
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Angular + Firebase Firestore</div>
+              <small>
+                Dicussing Angular and Firebase combination in developing a
+                complete application without having the need of Backend.
+                Conducted at an international <b>Cognizant event</b> <br /><b
+                  >International Event Link:</b
+                >
+                <a
+                  href="https://www.youtube.com/watch?v=gVwBOBXCpEs&t=4s"
+                  target="_blank"
+                >
+                  Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">ChatGPT Integration to Web Apps</div>
+              <small>
+                Talk about integrating ChatGPT API to a Web Application.
+                Conducted at an international <b>Microsoft event</b> <br />
+                <b>International Event Link:</b>
+                <a
+                  href="https://www.facebook.com/msdnphilippines/posts/pfbid02wevXFeC5QaSsmjzngk5SoQGvUFzY8PvZUPBJ6nsLEyaE4JxnD5QeBF6GwCFuQy1ml"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/permalink.php?story_fbid=pfbid0im45GzfbNDHPoFmrjYtKgaaQvtqvFWFuBrBGnzh7i78D74QovaEmRLr7iRw44E2El&id=61552012726657"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Building a Web Games AI with ChatGPT</div>
+              <small>
+                Talk about integrating ChatGPT API to a Web Games AI
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/softcon.ph/videos/207484272328198"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Commencement or Graduation Speaker</div>
+              <small>
+                Guest speaker at commencenment events(College or Senior High)
+                <br />
+                <b>Saint John Nepomucene Pariochial School:</b>
+                <a
+                  href="https://www.facebook.com/SJNPS88/posts/pfbid0pqNACoSYHY1GmabdMrfF5s74TKhwj7TDNP23TUsCtceuUf22kD4d6rJoZKuXZur4l"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+                <br />
+                <b>National University:</b>
+                <a
+                  href="https://www.facebook.com/NationalUniversityPhilippines/posts/pfbid02JvTDVzpen2PiFKmSLM3Z8Gw9zc47eWui3GwaMV9Ye5KTTUzuSHQ2Qu52hzEXWCUhl"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Centering a DIV 101: Implementing UI Design Better
               </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">ChatGPT Integration to Web Apps</div>
-                <small>
-                    Talk about integrating ChatGPT API to a Web Application. Conducted at an international <b>Microsoft event</b>
-                    <br> <b>International Event Link:</b> <a href="https://www.facebook.com/msdnphilippines/posts/pfbid02wevXFeC5QaSsmjzngk5SoQGvUFzY8PvZUPBJ6nsLEyaE4JxnD5QeBF6GwCFuQy1ml" target="_blank" class="ms-2">Facebook post</a>
-                    <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0im45GzfbNDHPoFmrjYtKgaaQvtqvFWFuBrBGnzh7i78D74QovaEmRLr7iRw44E2El&id=61552012726657" target="_blank" class="ms-2">Facebook post</a>
-                </small>
-                
+              <small>
+                Talk about implementing designs into actual HTML & CSS with best
+                practices
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/stephen.vinuya/posts/pfbid0rRKX6DHg8dYaTcN6nVmkKLDGzieNqfhjUZ2MDwkSXhxUaxV8pZCFBgMqTfai3mijl"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Angular State Management</div>
+              <small>
+                Talk about doing state management on Angular
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=eYwezPerjAs&pp=ygUOU3RlcGhlbiBWaW51eWE%3D"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                PWA For Games: An Enhanced Web Gaming Experience
+              </div>
+              <small>
+                Talk about utilizing PWA for Web games, NDC Event at Sydney,
+                Australia
+                <br />
+                <b>International Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=LWRdqkxV3xw&pp=ygUOU3RlcGhlbiBWaW51eWE%3D"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
 
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Introduction to Angular</div>
+              <small>
+                Introduction to Angular basic concepts
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=6wLnkk-lpY0"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Ionic Development</div>
+              <small>
+                Introduction to Ionic development
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=FUC33aZeB60&pp=ygUOU3RlcGhlbiBWaW51eWE%3D"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Firebase & GCP</div>
+              <small>
+                Discussions about Firebase and GCP
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=FZs83I_yvEM"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Creating Progressive Web App Games using Angular
               </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Building a Web Games AI with ChatGPT</div>
-                <small>
-                    Talk about integrating ChatGPT API to a Web Games AI
-                    <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/softcon.ph/videos/207484272328198" target="_blank"  class="ms-2">Facebook post</a>
-                </small>
+              <small>
+                Talk about creating PWA app in Angular
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.youtube.com/watch?v=vyNR3ex9fbw"
+                  target="_blank"
+                  class="ms-2"
+                  >Youtube video</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Reactive Programming in Angular with real world use cases
               </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Commencement or Graduation Speaker</div>
-                  <small>
-                      Guest speaker at commencenment events(College or Senior High)
-                      <br> <b>Saint John Nepomucene Pariochial School:</b> <a href="https://www.facebook.com/SJNPS88/posts/pfbid0pqNACoSYHY1GmabdMrfF5s74TKhwj7TDNP23TUsCtceuUf22kD4d6rJoZKuXZur4l" target="_blank"  class="ms-2">Facebook post</a>
-                      <br> <b>National University:</b> <a href="https://www.facebook.com/NationalUniversityPhilippines/posts/pfbid02JvTDVzpen2PiFKmSLM3Z8Gw9zc47eWui3GwaMV9Ye5KTTUzuSHQ2Qu52hzEXWCUhl" target="_blank"  class="ms-2">Facebook post</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Centering a DIV 101: Implementing UI Design Better</div>
-                  <small>
-                      Talk about implementing designs into actual HTML & CSS with best practices
-                      <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/stephen.vinuya/posts/pfbid0rRKX6DHg8dYaTcN6nVmkKLDGzieNqfhjUZ2MDwkSXhxUaxV8pZCFBgMqTfai3mijl" target="_blank"  class="ms-2">Facebook post</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Angular State Management</div>
-                  <small>
-                      Talk about doing state management on Angular
-                      <br> <b>Local Event Link:</b> <a href="https://www.youtube.com/watch?v=eYwezPerjAs&pp=ygUOU3RlcGhlbiBWaW51eWE%3D" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">PWA For Games: An Enhanced Web Gaming Experience</div>
-                  <small>
-                      Talk about utilizing PWA for Web games, NDC Event at Sydney, Australia
-                      <br> <b>International Event Link:</b> <a href="https://www.youtube.com/watch?v=LWRdqkxV3xw&pp=ygUOU3RlcGhlbiBWaW51eWE%3D" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Introduction to Angular</div>
-                  <small>
-                      Introduction to Angular basic concepts
-                      <br> <b>Local Event Link:</b> <a href="https://www.youtube.com/watch?v=6wLnkk-lpY0" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Ionic Development</div>
-                  <small>
-                      Introduction to Ionic development
-                      <br> <b>Local Event Link:</b> <a href="https://www.youtube.com/watch?v=FUC33aZeB60&pp=ygUOU3RlcGhlbiBWaW51eWE%3D" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Firebase & GCP</div>
-                  <small>
-                      Discussions about Firebase and GCP
-                      <br> <b>Local Event Link:</b> <a href="https://www.youtube.com/watch?v=FZs83I_yvEM" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Creating Progressive Web App Games using Angular</div>
-                  <small>
-                      Talk about creating PWA app in Angular
-                      <br> <b>Local Event Link:</b> <a href="https://www.youtube.com/watch?v=vyNR3ex9fbw" target="_blank"  class="ms-2">Youtube video</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Reactive Programming in Angular with real world use cases</div>
-                  <small>
-                      Discussions Reactive Programming on Angular using RxJS
-                      <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/stephen.vinuya/posts/pfbid0HiEPpuRjGKeva35rYrgV2HgNiRgACTfQNwAEFe5iP3KcHWs7wv3WjgTP9me8GgDpl" target="_blank"  class="ms-2">Facebook post</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">HTML5 Game Development</div>
-                  <small>
-                      Discussions on developing HTML5 games
-                      <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/webraccoonclothing/photos/a.953024234902908/1300460270159301?paipv=0&eav=AfbOJeklZCyXTdGlhYX4LAsX5gRC237SB_qeZEGxEWCWIp-fGEQzAb4asLDVLLnyHis&_rdr" target="_blank"  class="ms-2">Facebook post</a>
-                  </small>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">Making PWA apps using Web components & Workbox</div>
-                  <small>
-                      Discussions on developing PWA apps using Web componentst and Workbox
-                      <br> <b>Local Event Link:</b> <a href="https://www.facebook.com/webdesigners.org.ph/photos/a.10150782419395551/10163239976850551/?type=3" target="_blank"  class="ms-2">Facebook post</a>
-                  </small>
-                </div>
-              </li>
+              <small>
+                Discussions Reactive Programming on Angular using RxJS
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/stephen.vinuya/posts/pfbid0HiEPpuRjGKeva35rYrgV2HgNiRgACTfQNwAEFe5iP3KcHWs7wv3WjgTP9me8GgDpl"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">HTML5 Game Development</div>
+              <small>
+                Discussions on developing HTML5 games
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/webraccoonclothing/photos/a.953024234902908/1300460270159301?paipv=0&eav=AfbOJeklZCyXTdGlhYX4LAsX5gRC237SB_qeZEGxEWCWIp-fGEQzAb4asLDVLLnyHis&_rdr"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                Making PWA apps using Web components & Workbox
+              </div>
+              <small>
+                Discussions on developing PWA apps using Web componentst and
+                Workbox
+                <br />
+                <b>Local Event Link:</b>
+                <a
+                  href="https://www.facebook.com/webdesigners.org.ph/photos/a.10150782419395551/10163239976850551/?type=3"
+                  target="_blank"
+                  class="ms-2"
+                  >Facebook post</a
+                >
+              </small>
+            </div>
+          </li>
         </ul>
-
-    </div>
+      </div>
     </div>
   </section>
 </div>

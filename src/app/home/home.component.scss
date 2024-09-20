@@ -185,10 +185,19 @@
     background-color: $dark1;
     display: flex;
     justify-content: center;
-    height: 230px;
+    max-height: 230px;
     overflow-y: hidden;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 676px) {
+      width: 315px;
+
+      img {
+        max-width: 320px;
+        height: auto;
+      }
+    }
   }
 
   &__project-container {

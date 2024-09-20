@@ -10,11 +10,12 @@
     align-items: center;
 
     @media screen and (max-width: 676px) {
-      width: 350px;
+      width: 315px;
     }
   }
 
   &__about-me {
+    margin-top: 20px;
     min-height: 400px;
     display: flex;
     justify-content: center;
