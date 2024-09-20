@@ -55,8 +55,8 @@
       }
 
       &-info {
-        margin-right: 40px;
-        margin-left: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -133,11 +133,11 @@
     @media screen and (max-width: 830px) {
       .container {
         flex-wrap: wrap;
-      }
+      } 
 
       &-info {
-        margin-right: 80px;
-        margin-left: 80px;
+        margin-right: 20px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
