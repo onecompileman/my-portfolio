@@ -15,8 +15,11 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons/faDesktop';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons/faMicrophone';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
+import { faComment } from '@fortawesome/free-regular-svg-icons/faComment';
+import { faEye } from '@fortawesome/free-regular-svg-icons/faEye';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -28,6 +31,11 @@ import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { TalksComponent } from './talks/talks.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { QuillModule } from 'ngx-quill';
+import { BlogDetailsComponent } from './blogs/blog-details/blog-details.component';
+import { BlogAuthorComponent } from './blogs/blog-author/blog-author.component';
+import { BlogCommentComponent } from './blogs/blog-comment/blog-comment.component'
 
 @NgModule({
   declarations: [
@@ -39,12 +47,17 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     ProjectsComponent,
     TalksComponent,
     ContactMeComponent,
+    BlogsComponent,
+    BlogDetailsComponent,
+    BlogAuthorComponent,
+    BlogCommentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
     RatingModule.forRoot(),
+    QuillModule.forRoot(),
     FormsModule,
     SharedModule,
     FontAwesomeModule,
@@ -65,7 +78,10 @@ export class AppModule {
       faFile,
       faLinkedin,
       faStackOverflow,
-      faFacebook
+      faFacebook,
+      faGithub,
+      faEye,
+      faComment
     );
   }
 }

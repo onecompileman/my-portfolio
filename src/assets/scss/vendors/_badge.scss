@@ -1,0 +1,21 @@
+@import "../config.scss";
+
+.badge {
+  border-radius: 0;
+}
+
+.badge-primary {
+  background-color: $primary;
+}
+
+.badge-success {
+  background-color: $success;
+}
+
+.badge-warning {
+  background-color: $warning;
+}
+
+.badge-info {
+  background-color: $info;
+}

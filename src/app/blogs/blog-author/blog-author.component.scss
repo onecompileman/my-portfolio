@@ -1,0 +1,51 @@
+@import "../../../assets/scss/config.scss";
+.#{$style-prefix}-blogs {
+  &__author {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .list-group {
+      a {
+        background-color: unset !important;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &-image {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: start;
+      width: 120px;
+      height: 120px;
+      background-color: $light;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  &__social-icons {
+    margin-top: 20px;
+    a {
+      margin-left: 10px;
+      margin-right: 10px;
+      color: $dark1;
+    }
+  }
+}

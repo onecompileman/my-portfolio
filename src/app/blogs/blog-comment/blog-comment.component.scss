@@ -1,0 +1,38 @@
+@import "../../../assets/scss/config.scss";
+.#{$style-prefix}-blog-comment {
+  display: flex;
+  flex-direction: column;
+
+  &__comments {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      text-align: center;
+    }
+  }
+  &__comment-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+
+    small {
+        font-size: 12px;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    p {
+        font-size: 14px;
+    }
+  }
+
+  textarea, input {
+    background-color: unset;
+  }
+}

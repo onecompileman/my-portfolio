@@ -1,0 +1,34 @@
+<div class="oc-blogs">
+  <oc-breadcrumb-banner
+    [banners]="banners"
+    title="Blog Details"
+  ></oc-breadcrumb-banner>
+
+  <section class="oc-blogs__blogs">
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="col-8">
+                <div class="oc-blogs__blog-content mt-3">
+                    <div class="oc-blogs__image-header">
+                        <img src="/assets/images/car-1.jpeg" alt="">
+                    </div>
+                    <h2 class="mt-2">Buying my first muscle car</h2>
+                    <div class="d-flex">
+                        <label for="" class="badge badge-info me-2"> CARS </label>
+                        <small>March 27, 2018</small>
+                    </div>
+
+                    <div class="mt-5 oc-blogs__blog-rich">
+
+                    </div>
+                </div>
+                <oc-blog-comment></oc-blog-comment>
+            </div>
+            <div class="col-4">
+                <oc-blog-author></oc-blog-author>
+            </div>
+        </div>
+        <div class="row"></div>
+    </div>
+  </section>
+</div>

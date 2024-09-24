@@ -1,0 +1,11 @@
+.page-link {
+  background-color: unset !important;
+  color: #444;
+  border: none;
+}
+
+.page-link.active {
+  background-color: unset !important;
+  color: $primary;
+  font-weight: bold;
+}

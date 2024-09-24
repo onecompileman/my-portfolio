@@ -7,6 +7,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { TalksComponent } from './talks/talks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { BlogDetailsComponent } from './blogs/blog-details/blog-details.component';
 
 const routes: Routes = [
   {
@@ -23,7 +25,11 @@ const routes: Routes = [
   },
   {
     path: 'blogs',
-    component: ComingSoonComponent,
+    component: BlogsComponent,
+  },
+  {
+    path: 'blogs/:id',
+    component: BlogDetailsComponent,
   },
   {
     path: 'talks',
