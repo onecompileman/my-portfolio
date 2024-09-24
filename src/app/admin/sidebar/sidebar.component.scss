@@ -1,0 +1,38 @@
+@import "../../../assets/scss/config.scss";
+.#{$style-prefix}-sidebar {
+    border-right: 1px solid rgba(0,0,0,0.2);
+    height: 100vh;
+
+    &__title {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        background-color: $bg1;
+        text-decoration: none;
+        color: unset;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    li {
+        font-size: 14px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.2s linear;
+
+        
+
+        &:hover {
+            color: $primary;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+    }
+
+    a.active {
+            color: $primary !important;
+            font-weight: bold;
+    }
+}

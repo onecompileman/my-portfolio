@@ -1,0 +1,41 @@
+<div class="oc-sidebar bg-white" style="width: 220px">
+  <a class="oc-sidebar__title">
+    <span class="fw-semibold">My Portfolio</span>
+  </a>
+  <ul class="list-unstyled ps-0">
+    <li>
+      <a
+        [routerLink]="['/admin']"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <fa-icon class="me-2" [icon]="['fas', 'dashboard']"></fa-icon>
+        Dashboard</a
+      >
+    </li>
+    <li class="">
+      <a [routerLink]="['/admin/blogs']" [routerLinkActive]="'active'">
+        <fa-icon class="me-2" [icon]="['fas', 'blog']"></fa-icon>
+
+        Blogs
+      </a>
+    </li>
+    <li class="">
+      <a
+        [routerLink]="['/admin/contact-inquiries']"
+        [routerLinkActive]="'active'"
+      >
+        <fa-icon class="me-2" [icon]="['fas', 'message']"></fa-icon>
+
+        Contact Inquiries
+      </a>
+    </li>
+    <li class="">
+      <a [routerLink]="['/admin/newsletter']" [routerLinkActive]="'active'">
+        <fa-icon class="me-2" [icon]="['fas', 'envelope']"></fa-icon>
+
+        Newsletter
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,64 @@
+@import "../../../assets/scss/config.scss";
+.#{$style-prefix}-blog-form {
+  &__image-upload {
+    height: 150px;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 12px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        span  {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: red;
+            height: 24px;
+            width: 24px;
+            color: $light;
+        }
+    }
+  }
+
+  &__tag-item {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    margin: 5px;
+    cursor: pointer;
+
+    &-active {
+      border: 1px solid black;
+    }
+  }
+
+   
+}
+
+::ng-deep .ql-editor{
+    height: 400px;
+  }

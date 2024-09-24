@@ -12,6 +12,9 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons/faHouse';
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons/faDesktop';
+import { faDashboard } from '@fortawesome/free-solid-svg-icons/faDashboard';
+import { faBlog } from '@fortawesome/free-solid-svg-icons/faBlog';
+import { faMessage } from '@fortawesome/free-solid-svg-icons/faMessage';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons/faMicrophone';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
@@ -35,7 +38,8 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { QuillModule } from 'ngx-quill';
 import { BlogDetailsComponent } from './blogs/blog-details/blog-details.component';
 import { BlogAuthorComponent } from './blogs/blog-author/blog-author.component';
-import { BlogCommentComponent } from './blogs/blog-comment/blog-comment.component'
+import { BlogCommentComponent } from './blogs/blog-comment/blog-comment.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +55,40 @@ import { BlogCommentComponent } from './blogs/blog-comment/blog-comment.componen
     BlogDetailsComponent,
     BlogAuthorComponent,
     BlogCommentComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
     RatingModule.forRoot(),
-    QuillModule.forRoot(),
+    QuillModule.forRoot({
+      modules: {
+        syntax: true, 
+        table: true,
+        toolbar: [
+          ['bold', 'italic', 'underline', 'strike'], // toggled buttons
+          ['blockquote', 'code-block'],
+
+          [{ header: 1 }, { header: 2 }], // custom button values
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          [{ script: 'sub' }, { script: 'super' }], // superscript/subscript
+          [{ indent: '-1' }, { indent: '+1' }], // outdent/indent
+          [{ direction: 'rtl' }], // text direction
+
+          [{ size: ['small', false, 'large', 'huge'] }], // custom dropdown
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+          [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+          [{ font: [] }],
+          [{ align: [] }],
+
+          ['clean'], // remove formatting button
+
+          ['link', 'image', 'video'], // link and image, video
+        ],
+      },
+    }),
     FormsModule,
     SharedModule,
     FontAwesomeModule,
@@ -81,7 +112,10 @@ export class AppModule {
       faFacebook,
       faGithub,
       faEye,
-      faComment
+      faComment,
+      faBlog,
+      faMessage,
+      faDashboard
     );
   }
 }

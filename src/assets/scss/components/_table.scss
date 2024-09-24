@@ -1,0 +1,143 @@
+@import '../config';
+
+.#{$style-prefix}-table {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+
+  &__advance-filter {
+    height: 0px;
+    transition: 0.3s linear;
+    background-color: #e2e7f0;
+    overflow: hidden;
+
+    input,
+    label,
+    select {
+      font-size: 12px;
+    }
+
+    &--collapsed {
+      height: auto;
+      overflow: unset !important;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__search-filter-text {
+    font-size: 12px;
+    color: $primary;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    width: 200px;
+
+    span {
+      font-size: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    select {
+      font-size: 12px;
+      height: 30px;
+      width: 65px;
+    }
+  }
+
+  &__items-found {
+    font-size: 12px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    position: relative;
+
+    input {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      font-size: 14px;
+    }
+
+    i {
+      color: #888;
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  thead,
+  .thead {
+    tr,
+    .tr {
+      background-color: #ffffff !important;
+      // background-color: #c6e5fd;
+    }
+  }
+
+  tbody,
+  .tbody {
+    tr,
+    .tr {
+      &:nth-of-type(odd) {
+        background-color: #e2e7f0 !important;
+      }
+
+      td.active,
+      td:hover {
+        background-color: #e0e0e0 !important;
+      }
+    }
+  }
+
+  th,
+  .th {
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 80px;
+  }
+
+  td,
+  .td {
+    background-color: unset !important;
+    font-size: 12px;
+    min-width: 80px;
+    input,
+    label {
+      font-size: 12px;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .table {
+    display: table;
+  }
+
+  .thead {
+    display: table-header-group;
+  }
+
+  .tr {
+    display: table-row;
+    width: 100%;
+  }
+
+  .td {
+    display: table-cell;
+    padding: 0.5rem 0.5rem;
+  }
+}

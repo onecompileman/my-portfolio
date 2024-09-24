@@ -1,5 +1,5 @@
 <div class="oc-app">
-  <oc-navbar></oc-navbar>
+  <oc-navbar *ngIf="!hideNavbarFooter"></oc-navbar>
   <router-outlet></router-outlet>
-  <oc-footer></oc-footer>
+  <oc-footer *ngIf="!hideNavbarFooter"></oc-footer>
 </div>

@@ -1,0 +1,73 @@
+@import '../config';
+
+.#{$style-prefix}-panel {
+  background-color: white;
+  // border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  input,
+  label,
+  select,
+  textarea {
+    font-size: 12px;
+  }
+
+  .panel-header {
+    background: #e7eaec;
+    height: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+    gap: 1%;
+    border-bottom: 0px solid #e7eaec;
+
+    .panel-title {
+      font-weight: 500;
+    }
+  }
+
+}
+
+.#{$style-prefix}-panel-list {
+  background-color: white;
+  // border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  input,
+  label,
+  select,
+  textarea {
+    font-size: 12px;
+  }
+  .panel-header {
+    background: #e7eaec;
+    height: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+    gap: 1%;
+    // border-bottom: 1px solid #c1d5eb;
+
+    .panel-title {
+      font-weight: 500;
+    }
+    .search-form {
+      flex-direction: row;
+      display: flex;
+      place-content: center flex-start;
+      align-items: center;
+      gap: 2%;
+      span {
+        font-weight: 500;
+      }
+
+    }
+
+
+  }
+
+}
