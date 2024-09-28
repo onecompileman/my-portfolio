@@ -11,8 +11,10 @@ import { ContactInquiriesComponent } from './contact-inquiries/contact-inquiries
 import { NewslettersComponent } from './newsletters/newsletters.component';
 import { BlogFormComponent } from './blogs/blog-form/blog-form.component';
 import { QuillModule } from 'ngx-quill';
-
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { ContactInquiryModalComponent } from './contact-inquiries/contact-inquiry-modal/contact-inquiry-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AdminComponent,
@@ -21,13 +23,17 @@ import { QuillModule } from 'ngx-quill';
     BlogsComponent,
     ContactInquiriesComponent,
     NewslettersComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    ContactInquiryModalComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     FontAwesomeModule,
-    QuillModule
+    QuillModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ModalModule.forRoot()
   ]
 })
 export class AdminModule { }

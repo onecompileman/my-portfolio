@@ -3,32 +3,37 @@
     [banners]="banners"
     title="Blog Details"
   ></oc-breadcrumb-banner>
-
   <section class="oc-blogs__blogs">
     <div class="container d-flex flex-column">
-        <div class="row">
-            <div class="col-md-8 col-sm-12">
-                <div class="oc-blogs__blog-content mt-3">
-                    <div class="oc-blogs__image-header">
-                        <img src="/assets/images/car-1.jpeg" alt="">
-                    </div>
-                    <h2 class="mt-2">Buying my first muscle car</h2>
-                    <div class="d-flex">
-                        <label for="" class="badge badge-info me-2"> CARS </label>
-                        <small>March 27, 2018</small>
-                    </div>
-
-                    <div class="mt-5 oc-blogs__blog-rich">
-
-                    </div>
-                </div>
-                <oc-blog-comment></oc-blog-comment>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="oc-blogs__blog-content mt-3">
+            <div class="oc-blogs__image-header">
+              <img [src]="blog.imageHeaderUrl" alt="Blog image header" />
             </div>
-            <div class="col-md-4 col-sm-12">
-                <oc-blog-author></oc-blog-author>
+            <h2 class="mt-2">{{ blog.title }}</h2>
+            <div class="d-flex">
+              <label for="" class="badge badge-{{ blog.tagClass }} me-2">
+                {{ blog.tags }}
+              </label>
+              <small>{{ blog.publishDate | date : "mediumDate" }}</small>
             </div>
+
+            <div class="mt-5 mb-5 oc-blogs__blog-rich">
+              <quill-view
+                [content]="blog.content"
+                format="html"
+                theme="snow"
+              ></quill-view>
+            </div>
+          </div>
+          <oc-blog-comment [blogId]="blog.id"></oc-blog-comment>
         </div>
-        <div class="row"></div>
+        <div class="col-md-4 col-sm-12">
+          <oc-blog-author></oc-blog-author>
+        </div>
+      </div>
+      <div class="row"></div>
     </div>
   </section>
 </div>

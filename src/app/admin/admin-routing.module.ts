@@ -6,6 +6,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ContactInquiriesComponent } from './contact-inquiries/contact-inquiries.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
 import { BlogFormComponent } from './blogs/blog-form/blog-form.component';
+import { BlogDetailResolver } from '../core/resolvers/blog-detail.resolver';
 
 const routes: Routes = [
   {
@@ -20,6 +21,13 @@ const routes: Routes = [
       {
         path: 'blogs',
         component: BlogsComponent
+      },
+      {
+        path: 'blogs/:id',
+        component: BlogFormComponent,
+        resolve: {
+          blog: BlogDetailResolver
+        }
       },
       {
         path: 'blogs/new-blog',

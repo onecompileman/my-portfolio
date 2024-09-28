@@ -17,6 +17,8 @@ import { faBlog } from '@fortawesome/free-solid-svg-icons/faBlog';
 import { faMessage } from '@fortawesome/free-solid-svg-icons/faMessage';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons/faMicrophone';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner';
+import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { faFile } from '@fortawesome/free-regular-svg-icons/faFile';
 import { faComment } from '@fortawesome/free-regular-svg-icons/faComment';
 import { faEye } from '@fortawesome/free-regular-svg-icons/faEye';
@@ -30,7 +32,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ServicesComponent } from './services/services.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { TalksComponent } from './talks/talks.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
@@ -40,6 +42,11 @@ import { BlogDetailsComponent } from './blogs/blog-details/blog-details.componen
 import { BlogAuthorComponent } from './blogs/blog-author/blog-author.component';
 import { BlogCommentComponent } from './blogs/blog-comment/blog-comment.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ApiInterceptor } from './core/interceptors/api.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 
 @NgModule({
   declarations: [
@@ -60,11 +67,12 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CarouselModule.forRoot(),
     RatingModule.forRoot(),
     QuillModule.forRoot({
       modules: {
-        syntax: true, 
+        syntax: true,
         table: true,
         toolbar: [
           ['bold', 'italic', 'underline', 'strike'], // toggled buttons
@@ -90,11 +98,20 @@ import { LoginComponent } from './login/login.component';
       },
     }),
     FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule.forRoot({ type: 'square-loader' })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
@@ -115,7 +132,9 @@ export class AppModule {
       faComment,
       faBlog,
       faMessage,
-      faDashboard
+      faDashboard,
+      faSpinner,
+      faTrash
     );
   }
 }

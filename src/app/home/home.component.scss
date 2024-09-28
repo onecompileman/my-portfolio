@@ -1,5 +1,8 @@
 @import "../../assets/scss/config.scss";
 .#{$style-prefix}-home {
+
+  overflow-x: hidden;
+
   &__about-me {
     min-height: 500px;
     display: flex;

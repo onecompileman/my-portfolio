@@ -91,13 +91,9 @@
     tr,
     .tr {
       &:nth-of-type(odd) {
-        background-color: #e2e7f0 !important;
+        background-color: #f6f6f6 !important;
       }
 
-      td.active,
-      td:hover {
-        background-color: #e0e0e0 !important;
-      }
     }
   }
 

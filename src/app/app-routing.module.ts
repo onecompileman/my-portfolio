@@ -10,6 +10,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogDetailsComponent } from './blogs/blog-details/blog-details.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { BlogDetailResolver } from './core/resolvers/blog-detail.resolver';
 
 const routes: Routes = [
   {
@@ -31,6 +33,9 @@ const routes: Routes = [
   {
     path: 'blogs/:id',
     component: BlogDetailsComponent,
+    resolve: {
+      blog: BlogDetailResolver
+    }
   },
   {
     path: 'talks',
@@ -52,6 +57,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
+    canActivate: [AuthGuard],
   },
 ];
 

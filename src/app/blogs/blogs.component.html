@@ -6,52 +6,68 @@
 
   <section class="oc-blogs__blogs">
     <div class="container d-flex flex-column">
-      <div class="oc-blogs__search">
+      <form [formGroup]="searchForm" class="oc-blogs__search">
         <input
           type="search"
           class="form-control"
           placeholder="Enter your keywords and search"
+          [(ngModel)]="searchQuery"
+          [ngModelOptions]="{ standalone: true }"
+          (keyup.enter)="searchForm.get('query').patchValue(searchQuery)"
         />
-        <button class="btn btn-primary ms-3">Search</button>
-      </div>
-      <p class="oc-blogs__search-results mt-3 mb-0" *ngIf="false">
-        <b>Results for:</b><span>"Sports"</span>
+        <button
+          class="btn btn-primary ms-3"
+          (click)="searchForm.get('query').patchValue(searchQuery)"
+        >
+          Search
+        </button>
+      </form>
+      <p class="oc-blogs__search-results mt-3 mb-0" *ngIf="searchForm.get('query').value">
+        <b>Results for:</b><span>"{{ searchForm.get('query').value }}"</span>
       </p>
       <h2 class="mt-md-5 mt-sm-2 mt-3">Recent Posts</h2>
 
       <div class="row">
         <div class="col-md-7 col-sm-12">
-          <div
-            class="oc-blogs__blog-item mt-3"
-            *ngFor="let i of [1, 2, 3, 4, 5]"
-          >
+            <div class="mt-4" *ngIf="!blogs.length">
+                <h4>No blogs found.</h4>
+            </div>
+          <div class="oc-blogs__blog-item mt-3" *ngFor="let blog of blogs">
             <div class="oc-blogs__blog-image">
-              <img src="/assets/images/car-1.jpeg" alt="Blog heading image" />
+              <img [src]="blog.imageHeaderUrl" alt="Blog heading image" />
             </div>
             <div class="oc-blogs__blog-item-info mt-2">
               <div>
-                <label for="" class="badge badge-info me-2"> CARS </label>
-                <small>March 27, 2018</small>
+                <label for="" class="badge badge-{{ blog.tagClass }} me-2"
+                  >{{ blog.tags }}
+                </label>
+                <small>{{ blog.publishDate | date : "mediumDate" }}</small>
               </div>
               <div>
                 <small class="me-2"
-                  ><fa-icon [icon]="['far', 'eye']"></fa-icon> 1M Views</small
+                  ><fa-icon [icon]="['far', 'eye']"></fa-icon>
+                  {{ blog.views }} Views</small
                 >
-                <small
+                <!-- <small
                   ><fa-icon [icon]="['far', 'comment']"></fa-icon> 1M
                   Comments</small
-                >
+                > -->
               </div>
             </div>
-            <a [routerLink]="['/blogs/1']"><h4 class="oc-blogs__blog-title mt-1">
-              Buying my first muscle car
-            </h4></a>
+            <a
+              ><h4 class="oc-blogs__blog-title mt-1">
+                {{ blog.title }}
+              </h4></a
+            >
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur porro a praesentium! Sint sapiente molestias
-              reprehenderit nobis atque. Architecto deserunt ducimus
+              {{ blog.content | slice : 0 : 30 }}
             </p>
-            <button class="btn btn-sm btn-primary">View More</button>
+            <a
+              [routerLink]="['/blogs/', blog.id]"
+              class="btn btn-sm btn-primary"
+              style="color: white"
+              >View More</a
+            >
           </div>
           <nav aria-label="Page navigation example" class="mt-3">
             <ul class="pagination">
@@ -60,7 +76,9 @@
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
-              <li class="page-item"><a class="page-link active" href="#">1</a></li>
+              <li class="page-item">
+                <a class="page-link active" href="#">1</a>
+              </li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item">

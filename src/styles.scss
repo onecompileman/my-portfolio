@@ -6,7 +6,12 @@
 /* Importing Datepicker SCSS file. */
 @import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+@import '../node_modules/sweetalert2/src/sweetalert2.scss';
+
+@import  "../node_modules/ngx-spinner/animations/square-loader.css";
+
+@import 'ngx-toastr/toastr';
+
 @import '../node_modules/quill/dist/quill.bubble.css';
 
 @import "../src/assets/scss/main.scss";
-
