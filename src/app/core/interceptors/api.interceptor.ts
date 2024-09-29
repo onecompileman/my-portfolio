@@ -17,6 +17,7 @@ export class ApiInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     const token = localStorage.getItem('authToken');
+    console.log('here', request.url);
     let clonedRequest = request.clone();
     if (
       !request.url.startsWith('http') &&

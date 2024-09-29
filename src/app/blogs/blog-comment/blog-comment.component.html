@@ -5,7 +5,7 @@
       *ngFor="let comment of blogComments"
       class="oc-blog-comment__comment-item"
     >
-      <div *ngIf="isLoggedIn" class="oc-blog-comment__comment-item-remove">x</div>
+      <div *ngIf="isLoggedIn" (click)="deleteBlogComment(comment)" class="oc-blog-comment__comment-item-remove">x</div>
       <b>{{ comment.name }}</b>
       <small>{{ comment.createdAt | date : "MMMM d, y, h:mm:ss a" }}</small>
       <p class="mt-3">

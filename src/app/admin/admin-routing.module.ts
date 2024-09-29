@@ -16,37 +16,39 @@ const routes: Routes = [
       {
         path: '',
         component: DashboardComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'blogs',
-        component: BlogsComponent
+        component: BlogsComponent,
+      },
+      {
+        path: 'blogs/new-blog',
+        component: BlogFormComponent,
+        pathMatch: 'full',
       },
       {
         path: 'blogs/:id',
         component: BlogFormComponent,
         resolve: {
-          blog: BlogDetailResolver
-        }
+          blog: BlogDetailResolver,
+        },
       },
-      {
-        path: 'blogs/new-blog',
-        component: BlogFormComponent
-      },
+
       {
         path: 'contact-inquiries',
-        component: ContactInquiriesComponent
+        component: ContactInquiriesComponent,
       },
       {
         path: 'newsletter',
-        component: NewslettersComponent
-      }
-    ]
-  }
+        component: NewslettersComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

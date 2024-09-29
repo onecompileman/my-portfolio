@@ -1,3 +1,3 @@
 export const environment: any = {
-  apiEndpoint: 'http://localhost:3000',
+  apiEndpoint: 'https://portfolio-backend-production-0131.up.railway.app',
 };

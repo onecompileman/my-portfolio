@@ -60,7 +60,7 @@
               </h4></a
             >
             <p>
-              {{ blog.content | slice : 0 : 30 }}
+              {{ blog.content | slice : 0 : 300 }}
             </p>
             <a
               [routerLink]="['/blogs/', blog.id]"
