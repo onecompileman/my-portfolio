@@ -43,6 +43,8 @@ export class RichTextParseService {
       }
     }
 
+    console.log($.html().includes('iframe'))
+
     return $.html();
   }
 

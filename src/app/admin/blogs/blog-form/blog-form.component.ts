@@ -119,6 +119,8 @@ export class BlogFormComponent implements OnInit {
   }
 
   private parseContent(html: string): Observable<string> {
+    console.log(html.includes('iframe'), html);
+
     return new Observable((observer) => {
       const filesToUpload =
         this.richTextParseService.getImagesFileFromHTML(html);

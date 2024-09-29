@@ -5,7 +5,7 @@ import { Blog } from '../shared/models/blog.model';
 import { RichTextParseService } from '../core/services/rich-text-parse.service';
 import { BlogTag } from '../shared/models/blog-tag.model';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { debounceTime, startWith } from 'rxjs';
 
@@ -27,8 +27,10 @@ export class BlogsComponent implements OnInit {
     },
   ];
 
+  pages: number[] = [];
   blogs: Blog[] = [];
   maxItemsPerPage: number = 5;
+  isLoading: boolean;
 
   searchForm: FormGroup;
 
@@ -44,6 +46,7 @@ export class BlogsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.initForm();
     this.getAllBlogs();
 
@@ -52,6 +55,7 @@ export class BlogsComponent implements OnInit {
         this.searchForm.get('tags').patchValue(query['tags']);
       }
     });
+  
   }
 
   private getAllBlogs() {
@@ -79,11 +83,18 @@ export class BlogsComponent implements OnInit {
                 );
                 return blog;
               });
+              this.pages = Array(Math.ceil(blogResponse.count / 5) || 1)
+                .fill(0)
+                .map((n, i) => i + 1);
               setTimeout(() => {
+                this.isLoading = false;
                 this.spinner.hide();
-              }, 1000)
+              }, 1000);
             },
-            () => this.spinner.hide()
+            () => {
+              this.isLoading = false;
+              this.spinner.hide();
+            }
           );
       });
   }

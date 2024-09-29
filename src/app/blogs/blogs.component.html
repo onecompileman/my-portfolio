@@ -22,16 +22,25 @@
           Search
         </button>
       </form>
-      <p class="oc-blogs__search-results mt-3 mb-0" *ngIf="searchForm.get('query').value">
-        <b>Results for:</b><span>"{{ searchForm.get('query').value }}"</span>
+      <p
+        class="oc-blogs__search-results mt-3 mb-0"
+        *ngIf="searchForm.get('query').value"
+      >
+        <b>Results for:</b><span>"{{ searchForm.get("query").value }}"</span>
+        <span
+          (click)="searchForm.get('query').patchValue(''); searchQuery = ''"
+          class="btn btn-sm btn-danger ms-2"
+        
+          >x</span
+        >
       </p>
       <h2 class="mt-md-5 mt-sm-2 mt-3">Recent Posts</h2>
 
       <div class="row">
         <div class="col-md-7 col-sm-12">
-            <div class="mt-4" *ngIf="!blogs.length">
-                <h4>No blogs found.</h4>
-            </div>
+          <div class="mt-4" *ngIf="!blogs.length && !isLoading">
+            <h4>No blogs found.</h4>
+          </div>
           <div class="oc-blogs__blog-item mt-3" *ngFor="let blog of blogs">
             <div class="oc-blogs__blog-image">
               <img [src]="blog.imageHeaderUrl" alt="Blog heading image" />
@@ -71,20 +80,13 @@
           </div>
           <nav aria-label="Page navigation example" class="mt-3">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link active" href="#">1</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
+              <li class="page-item" *ngFor="let page of pages">
+                <a
+                  class="page-link"
+                  (click)="searchForm.get('page').patchValue(page - 1)"
+                  [class.active]="searchForm.get('page').value + 1 === page"
+                  >{{ page }}</a
+                >
               </li>
             </ul>
           </nav>

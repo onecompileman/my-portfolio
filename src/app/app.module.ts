@@ -45,8 +45,24 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from './core/interceptors/api.interceptor';
 import { ToastrModule } from 'ngx-toastr';
-import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxSpinnerModule } from 'ngx-spinner';
+import Quill from 'quill';
+const VideoEmbed = Quill.import("formats/video") as any;
 
+class VideoResponsive extends VideoEmbed {
+    static aspectRatio: string = "16 / 9 auto"
+    static create(value: string) {
+        const node = super.create(value);
+        node.setAttribute('width', '100%');
+        node.style.aspectRatio = this.aspectRatio;
+        return node;
+    }
+    html () {
+        return this['domNode'].outerHTML;
+    }
+}
+
+Quill.register(VideoResponsive, true);
 
 @NgModule({
   declarations: [
@@ -103,7 +119,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     FontAwesomeModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgxSpinnerModule.forRoot({ type: 'square-loader' })
+    NgxSpinnerModule.forRoot({ type: 'square-loader' }),
   ],
   providers: [
     {
