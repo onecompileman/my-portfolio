@@ -1,20 +1,227 @@
 @import "../../assets/scss/config.scss";
 .#{$style-prefix}-contact-me {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 311px);
+
+  &__section {
+    padding: 60px 40px;
+    background-color: $bg1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 311px);
+    align-items: center;
 
     .container {
-        max-width: 1100px;
+      max-width: 1000px;
+      width: 100%;
     }
 
-    &__form {
-        display: flex;
-        align-items: center;
-        flex:1;
+    @media screen and (max-width: 830px) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+
+    h2 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &__header-line {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(119, 17, 247, 1), rgba(45, 147, 254, 1));
+    margin-bottom: 16px;
+
+    &--left {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  &__layout {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+
+    @media screen and (max-width: 830px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info-card {
+    width: 300px;
+    flex-shrink: 0;
+    background: $light;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+
+    h5 {
+      font-size: 17px;
+      font-weight: 700;
+      color: $dark1;
+      margin-bottom: 6px;
     }
 
-    textarea {
-        height: 147px;
+    @media screen and (max-width: 830px) {
+      width: 100%;
     }
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(119, 17, 247, 1), rgba(45, 147, 254, 1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  &__info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+      font-size: 14px;
+      color: $dark1;
+    }
+  }
+
+  &__info-label {
+    font-size: 11px !important;
+    font-weight: 600;
+    color: #999 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(119, 17, 247, 0.08);
+    border: 1px solid rgba(119, 17, 247, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: $primary;
+      color: white;
+    }
+  }
+
+  &__form-card {
+    flex: 1;
+    background: $light;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+
+    h5 {
+      font-size: 17px;
+      font-weight: 700;
+      color: $dark1;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__field-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .oc-contact-me__field {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    .form-control {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      background-color: $bg1;
+      font-size: 14px;
+      padding: 10px 14px;
+      color: $dark1;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $primary;
+        background-color: $light;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    textarea.form-control {
+      resize: none;
+    }
+  }
+
+  .error-label {
+    font-size: 12px;
+    color: #e53935;
+    margin-top: 4px;
+  }
+
+  &__submit {
+    padding: 10px 32px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
 }

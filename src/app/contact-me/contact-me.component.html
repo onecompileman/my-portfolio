@@ -3,146 +3,148 @@
     [banners]="banners"
     title="Contact Me"
   ></oc-breadcrumb-banner>
-  <form [formGroup]="contactForm" class="oc-contact-me__form">
+
+  <section class="oc-contact-me__section">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div *ngIf="errorSend" class="alert alert-danger w-100">
+      <div class="oc-contact-me__header" animateOnScroll="animate__fadeInDown">
+        <h2>Get In Touch</h2>
+        <div class="oc-contact-me__header-line"></div>
+      </div>
+      <p class="oc-contact-me__subtitle" animateOnScroll="animate__fadeInUp" animateDelay="0.1s">
+        Have a project in mind or want to work together? Feel free to reach out —
+        I'd love to hear from you.
+      </p>
+
+      <div class="oc-contact-me__layout">
+
+        <div class="oc-contact-me__info-card" animateOnScroll="animate__fadeInLeft">
+          <h5>Contact Information</h5>
+          <div class="oc-contact-me__header-line oc-contact-me__header-line--left mb-4"></div>
+
+          <div class="oc-contact-me__info-item">
+            <div class="oc-contact-me__info-icon">
+              <fa-icon [icon]="['fas', 'house']"></fa-icon>
+            </div>
+            <div class="oc-contact-me__info-text">
+              <span class="oc-contact-me__info-label">Location</span>
+              <span>Antipolo, Rizal Philippines</span>
+            </div>
+          </div>
+
+          <div class="oc-contact-me__info-item">
+            <div class="oc-contact-me__info-icon">
+              <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+            </div>
+            <div class="oc-contact-me__info-text">
+              <span class="oc-contact-me__info-label">Phone</span>
+              <span>+63 9399052618</span>
+            </div>
+          </div>
+
+          <div class="oc-contact-me__info-item">
+            <div class="oc-contact-me__info-icon">
+              <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+            </div>
+            <div class="oc-contact-me__info-text">
+              <span class="oc-contact-me__info-label">Email</span>
+              <span>onecompileman13&#64;gmail.com</span>
+            </div>
+          </div>
+
+          <div class="oc-contact-me__socials mt-4">
+            <a href="https://www.facebook.com/stephen.vinuya/" target="_blank" class="oc-contact-me__social-link">
+              <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+            </a>
+            <a href="https://github.com/onecompileman" target="_blank" class="oc-contact-me__social-link">
+              <fa-icon [icon]="['fab', 'github']"></fa-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/stephen-vinuya-54441b106/" target="_blank" class="oc-contact-me__social-link">
+              <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+            </a>
+            <a href="https://stackoverflow.com/users/9818614/onecompileman" target="_blank" class="oc-contact-me__social-link">
+              <fa-icon [icon]="['fab', 'stack-overflow']"></fa-icon>
+            </a>
+          </div>
+        </div>
+
+        <form [formGroup]="contactForm" class="oc-contact-me__form-card" animateOnScroll="animate__fadeInRight">
+          <h5>Send a Message</h5>
+          <div class="oc-contact-me__header-line oc-contact-me__header-line--left mb-4"></div>
+
+          <div *ngIf="errorSend" class="alert alert-danger">
             Error on submitting contact inquiry, please try again later.
           </div>
-          <div *ngIf="successSend" class="alert alert-success w-100">
+          <div *ngIf="successSend" class="alert alert-success">
             Submitted contact inquiry successfully.
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <div class="d-flex align-items-center mt-4 pb-2">
-            <fa-icon
-              [icon]="['fas', 'house']"
-              class="oc-text-primary"
-              size="xl"
-            ></fa-icon>
-            <span class="ms-3">Antipolo, Rizal Philippines</span>
-          </div>
-          <div class="d-flex align-items-center mt-4 pb-2">
-            <fa-icon
-              [icon]="['fas', 'phone']"
-              class="oc-text-primary"
-              size="xl"
-            ></fa-icon>
-            <span class="ms-3">+63 9399052618</span>
-          </div>
-          <div class="d-flex align-items-center mt-4">
-            <fa-icon
-              [icon]="['fas', 'envelope']"
-              class="oc-text-primary"
-              size="xl"
-            ></fa-icon>
-            <span class="ms-3">onecompileman13.com</span>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div>
-            <input
-              type="text"
-              class="form-control mt-3"
-              placeholder="Name"
-              formControlName="name"
-            />
-            <div
-              class="d-flex flex-column"
-              *ngIf="
-                contactForm.get('name').errors &&
-                contactForm.get('name').touched
-              "
-            >
-              <small
-                class="error-label"
-                *ngIf="contactForm.get('name').errors['required']"
-              >
-                Name is required
-              </small>
-            </div>
-          </div>
-          <div>
-            <input
-              type="text"
-              class="form-control mt-3"
-              placeholder="Email Address"
-              formControlName="email"
-            />
 
-            <div
-              class="d-flex flex-column"
-              *ngIf="
-                contactForm.get('email').errors &&
-                contactForm.get('email').touched
-              "
-            >
+          <div class="oc-contact-me__field-row">
+            <div class="oc-contact-me__field">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                formControlName="name"
+              />
               <small
                 class="error-label"
-                *ngIf="contactForm.get('email').errors['required']"
-              >
-                Email Address is required
-              </small>
+                *ngIf="contactForm.get('name').errors?.['required'] && contactForm.get('name').touched"
+              >Name is required</small>
+            </div>
+            <div class="oc-contact-me__field">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email Address"
+                formControlName="email"
+              />
               <small
                 class="error-label"
-                *ngIf="contactForm.get('email').errors['required']"
-              >
-                Must be a valid email addresss
-              </small>
+                *ngIf="contactForm.get('email').errors?.['required'] && contactForm.get('email').touched"
+              >Email Address is required</small>
             </div>
           </div>
 
-          <input
-            type="text"
-            class="form-control mt-3"
-            placeholder="Subject"
-            formControlName="subject"
-          />
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <textarea
-            name=""
-            id=""
-            rows="6"
-            class="form-control mt-3"
-            placeholder="Message"
-            formControlName="message"
-          ></textarea>
+          <div class="oc-contact-me__field">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Subject"
+              formControlName="subject"
+            />
+          </div>
 
-          <div
-            class="d-flex flex-column"
-            *ngIf="
-              contactForm.get('message').errors &&
-              contactForm.get('message').touched
-            "
-          >
+          <div class="oc-contact-me__field">
+            <textarea
+              rows="6"
+              class="form-control"
+              placeholder="Your Message"
+              formControlName="message"
+            ></textarea>
             <small
               class="error-label"
-              *ngIf="contactForm.get('message').errors['required']"
-            >
-              Message is required
-            </small>
+              *ngIf="contactForm.get('message').errors?.['required'] && contactForm.get('message').touched"
+            >Message is required</small>
           </div>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-end pe-2 pb-3">
-        <button
-          [disabled]="isSending"
-          (click)="sendContact()"
-          class="btn btn-primary me-1 mt-4"
-        >
-          <fa-icon
-            class="me-2"
-            [icon]="['fas', 'spinner']"
-            [animation]="'spin'"
-            *ngIf="isSending"
-          ></fa-icon
-          >Send Message
-        </button>
+
+          <div class="d-flex justify-content-end">
+            <button
+              [disabled]="isSending"
+              (click)="sendContact()"
+              class="btn btn-primary oc-contact-me__submit"
+            >
+              <fa-icon
+                class="me-2"
+                [icon]="['fas', 'spinner']"
+                [animation]="'spin'"
+                *ngIf="isSending"
+              ></fa-icon>
+              Send Message
+            </button>
+          </div>
+        </form>
+
       </div>
     </div>
-  </form>
+  </section>
 </div>

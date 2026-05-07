@@ -1,56 +1,55 @@
 <div class="oc-projects">
-    <oc-breadcrumb-banner
+  <oc-breadcrumb-banner
     [banners]="banners"
     title="Projects"
   ></oc-breadcrumb-banner>
   <section class="oc-projects__projects">
-    <div class="container d-flex flex-column">
-      <h2 class="mt-md-5 mt-sm-2">Projects/Clients I have worked with</h2>
-      <p>
-        Throughout my career, I’ve had the privilege of working on a variety of
-      impactful and cutting-edge projects that showcase my expertise in <b>Angular,
-      TypeScript</b>, and modern web development technologies.  Each project reflects
-      my commitment to delivering high-quality solutions that meet client goals
-      and exceed expectations
-      </p>
-      <section class="oc-projects__project-item" *ngFor="let project of projects">
-        <div class="container d-flex">
-          <div class="d-flex align-items-center justify-content-center">
-            <carousel
-              class="oc-projects__carousel"
-              [isAnimated]="true"
-              [interval]="0"
-            >
-              <slide *ngFor="let image of project.images">
-                <a
-                  class="slide-item"
-                  [href]="image.url"
-                  [attr.data-pswp-width]="image.width"
-                  [attr.data-pswp-height]="image.height"
-                >
-                  <img
-                    [src]="image.url"
-                    alt="Profile"
-                    width="450"
-                  />
-                </a>
-              </slide>
-        
-            </carousel>
-          </div>
-          <div class="oc-projects__project-item-info">
-            <h4>{{ project.name }}</h4>
-            <b>{{ project.role }}</b>
-            <span>{{ project.techs }}</span>
-
-            <p>
-              {{ project.description }}
-            </p>
-          </div>
-          <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
-        </div>
-      </section>    
-    
+    <div class="container d-flex flex-column align-items-center">
+      <div class="oc-projects__header" animateOnScroll="animate__fadeInDown">
+        <h2>Projects/Clients I have worked with</h2>
+        <div class="oc-projects__header-line"></div>
       </div>
-      </section>
+      <p animateOnScroll="animate__fadeInUp" animateDelay="0.1s">
+        Throughout my career, I've had the privilege of working on a variety of
+        impactful and cutting-edge projects that showcase my expertise in
+        <b>Angular (2–20)</b>, <b>TypeScript</b>, <b>.Net</b>, <b>Nest.JS</b>,
+        <b>React</b>, <b>AWS Serverless</b>, and <b>Firebase Cloud Functions</b>.
+      </p>
+      <div class="oc-projects__project-container mt-4">
+        <div
+          class="oc-projects__project-item"
+          animateOnScroll="animate__fadeInUp"
+          *ngFor="let project of projects"
+        >
+          <carousel
+            class="oc-projects__carousel"
+            [isAnimated]="true"
+            [interval]="0"
+          >
+            <slide *ngFor="let image of project.images">
+              <a
+                class="slide-item"
+                [href]="image.url"
+                [attr.data-pswp-width]="image.width"
+                [attr.data-pswp-height]="image.height"
+              >
+                <img [src]="image.url" alt="{{ project.name }}" />
+              </a>
+            </slide>
+          </carousel>
+          <div class="oc-projects__project-item-info">
+            <h5>{{ project.name }}</h5>
+            <span class="oc-projects__project-item-role">{{ project.role }}</span>
+            <div class="oc-projects__project-item-tags">
+              <span
+                class="oc-projects__project-item-tag"
+                *ngFor="let tech of project.techs.split(',')"
+              >{{ tech.trim() }}</span>
+            </div>
+            <p class="oc-projects__project-item-desc">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

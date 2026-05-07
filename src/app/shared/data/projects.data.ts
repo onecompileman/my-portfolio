@@ -2,6 +2,57 @@ import { Project } from "../models/project.model";
 
 export const Projects: Project[] = [
     {
+        name: 'Car Enthusiast Philippines',
+        role: 'Senior Fullstack Developer',
+        techs: 'Angular 19, TypeScript, SCSS, .Net, Bootstrap, Tailwind, GCP, Firebase',
+        images: [
+            {
+                width: 1760,
+                height: 1291,
+                url: '/assets/images/car-enthusiast-1.jpg'
+            },
+            {
+                width: 1764,
+                height: 1306,
+                url: '/assets/images/car-enthusiast-2.jpg'
+            },
+            {
+                width: 1762,
+                height: 1274,
+                url: '/assets/images/car-enthusiast-3.jpg'
+            }
+        ],
+        description: `Lead and architect the Car Enthusiast Philippines website, a car enthusiast community website with features like car listing, car reviews, car news and events.`
+    },
+    {
+        name: 'Ticket',
+        role: 'Senior Fullstack Developer',
+        techs: 'React, TypeScript, SCSS, AWS SAM, AWS Lambda, AWS API Gateway, AWS RDS, AWS S3, AWS Serverless',
+        images: [
+            {
+                width: 2246,
+                height: 1294,
+                url: '/assets/images/ticket-1.png'
+            },
+            {
+                width: 2203,
+                height: 1198,
+                url: '/assets/images/ticket-2.png'
+            },
+            {
+                width: 2541,
+                height: 1276,
+                url: '/assets/images/ticket-3.png'
+            },
+            {
+                width: 1106,
+                height: 874,
+                url: '/assets/images/ticket-4.png'
+            }
+        ],
+        description: `Lead and architect the Ticket platform, a ticketing software with features like event management, ticket sales, and reporting.`
+    },
+    {
         name: 'Pitcon 2019 Conference Site',
         role: 'Solo Developer',
         techs: 'Angular 7,PWA, TypeScript, SCSS',
@@ -11,14 +62,14 @@ export const Projects: Project[] = [
                 height: 1384,
                 url: '/assets/images/10.png'
             },
-         
+
         ],
         description: `The PITCON 2019 project is a seminar that will cover some industry standard skills needed to prepare the students in entering the IT-BPO industry. • I.T. students should understand the importance of developing such skills to prevent job-skills mismatch and unemployment. • The knowledge obtained from seminars play a key-role not only in developing our country's I.T. infrastructure but also to the career path of the students.`
     },
     {
         name: 'Getz Clinical Platform',
         role: 'Senior Frontend Developer',
-        techs: 'Angular 16, TypeScript, SCSS',
+        techs: 'Angular 16, TypeScript, SCSS, .Net, Tailwind',
         images: [
             {
                 width: 3800,
@@ -36,7 +87,7 @@ export const Projects: Project[] = [
     {
         name: 'Auditmacs Ticketing Software',
         role: 'Lead Frontend Developer',
-        techs: 'Angular 12, TypeScript, SCSS',
+        techs: 'Angular 19, TypeScript, SCSS, .Net, Bootstrap, Tailwind',
         images: [
             {
                 width: 1920,
@@ -114,7 +165,7 @@ export const FeaturedProjects: Project[] = [
     {
         name: 'Getz Clinical Platform',
         role: 'Senior Frontend Developer',
-        techs: 'Angular 16, TypeScript, SCSS',
+        techs: 'Angular 16, TypeScript, SCSS, .Net, Tailwind',
         images: [
             {
                 width: 3800,
@@ -132,7 +183,7 @@ export const FeaturedProjects: Project[] = [
     {
         name: 'Auditmacs Ticketing Software',
         role: 'Lead Frontend Developer',
-        techs: 'Angular 12, TypeScript, SCSS',
+        techs: 'Angular 19, TypeScript, SCSS, .Net, Bootstrap, Tailwind',
         images: [
             {
                 width: 1920,
@@ -147,6 +198,56 @@ export const FeaturedProjects: Project[] = [
         ],
         description: `Helped developed Auditmacs Ticketing software for 2yrs. Responsible for setting up standards, architecting the Frontend app and leading other frontend devs. The platform is responsible for handling huge amount of records related to accounting, ticketing, employee records and schedules.`
     },
-    
+    {
+        name: 'Car Enthusiast Philippines',
+        role: 'Senior Fullstack Developer',
+        techs: 'Angular 19, TypeScript, SCSS, .Net, Bootstrap, Tailwind, GCP, Firebase ',
+        images: [
+            {
+                width: 1760,
+                height: 1291,
+                url: '/assets/images/car-enthusiast-1.jpg'
+            },
+            {
+                width: 1764,
+                height: 1306,
+                url: '/assets/images/car-enthusiast-2.jpg'
+            },
+                 {
+                width: 1762,
+                height: 1274,
+                url: '/assets/images/car-enthusiast-3.jpg'
+            }
+        ],
+        description: `Lead and architect the Car Enthusiast Philippines website, a car enthusiast community website with features like car listing, car reviews, car news and events.`
+    },
+    {
+        name: 'Ticket',
+        role: 'Senior Fullstack Developer',
+        techs: 'React, TypeScript, SCSS, AWS SAM, AWS Lambda, AWS API Gateway, AWS RDS, AWS S3, AWS Serverless',
+        images: [
+            {
+                width: 2246,
+                height: 1294,
+                url: '/assets/images/ticket-1.png'
+            },
+            {
+                width: 2203,
+                height: 1198,
+                url: '/assets/images/ticket-2.png'
+            },
+            {
+                width: 2541,
+                height: 1276,
+                url: '/assets/images/ticket-3.png'
+            },
+            {
+                width: 1106,
+                height: 874,
+                url: '/assets/images/ticket-4.png'
+            }
+        ],
+        description: `Lead and architect the Ticket platform, a ticketing software with features like event management, ticket sales, and reporting.`
+    },
    
 ]

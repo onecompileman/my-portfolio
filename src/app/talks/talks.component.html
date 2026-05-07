@@ -4,32 +4,39 @@
     title="Talks"
   ></oc-breadcrumb-banner>
   <section class="oc-talks__talks">
-    <div class="container d-flex flex-column">
-      <h2 class="mt-md-5 mt-sm-2">Talks I have conducted</h2>
-      <p>
-        I’ve always been passionate about sharing what I know and giving back to
-        the community. Over the years, I’ve had the chance to deliver technical
+    <div class="container d-flex flex-column align-items-center">
+      <div class="oc-talks__header" animateOnScroll="animate__fadeInDown">
+        <h2>Talks I have conducted</h2>
+        <div class="oc-talks__header-line"></div>
+      </div>
+      <p animateOnScroll="animate__fadeInUp" animateDelay="0.1s">
+        I've always been passionate about sharing what I know and giving back to
+        the community. Over the years, I've had the chance to deliver technical
         talks on topics that I truly care about, like
-        <b>Angular, TypeScript</b>, and <b>cloud integration</b>.
-        <br> <br>
-        My goal with
-        each talk is simple: to help developers, whether they're just starting
-        or already experienced, take their skills to the next level with
+        <b>Angular</b>, <b>TypeScript</b>, and <b>cloud integration</b>.
+        My goal with each talk is simple: to help developers — whether they're just
+        starting or already experienced — take their skills to the next level with
         practical tips and real-world examples.
       </p>
-      <div class="container p-0">
-        <div class="oc-talks__talk-item" *ngFor="let talk of talks">
-          <h4>{{ talk.name }}</h4>
+      <div class="oc-talks__talk-container mt-4">
+        <div
+          class="oc-talks__talk-item"
+          animateOnScroll="animate__fadeInUp"
+          *ngFor="let talk of talks"
+        >
           <div class="oc-talks__talk-images">
             <a
               *ngFor="let image of talk.images"
-              class="slide-item"
+              class="slide-item oc-talks__talk-image-link"
               [href]="image.url"
               [attr.data-pswp-width]="image.width"
               [attr.data-pswp-height]="image.height"
             >
-              <img [src]="image.url" alt="Profile" height="230" />
+              <img [src]="image.url" alt="{{ talk.name }}" />
             </a>
+          </div>
+          <div class="oc-talks__talk-info">
+            <h5>{{ talk.name }}</h5>
           </div>
         </div>
       </div>

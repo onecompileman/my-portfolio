@@ -2,59 +2,121 @@
 .#{$style-prefix}-blog-comment {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 
   &__comments {
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: $light;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    padding: 24px;
     display: flex;
     flex-direction: column;
-
-    max-height: 400px;
+    max-height: 420px;
     overflow-y: auto;
 
-    @include scrollbars(4px, #3F5CA2,$light);
-    
+    @include scrollbars(4px, $primary, $bg1);
 
     h5 {
-      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: $dark1;
+      margin-bottom: 16px;
     }
   }
+
   &__comment-item {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
     position: relative;
 
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    b {
+      font-size: 14px;
+      color: $dark1;
+    }
+
+    small {
+      font-size: 12px;
+      color: #999;
+      margin-top: 2px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
     &-remove {
-      background-color: red;
+      background: linear-gradient(135deg, #e53935, #e35d5b);
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
       color: white;
-      height: 32px;
-      width: 32px;
+      height: 28px;
+      width: 28px;
       cursor: pointer;
-      border-radius: 100%;
+      border-radius: 50%;
       top: 0;
       right: 0;
-    }
+      font-size: 13px;
+      font-weight: 700;
+      transition: opacity 0.2s ease;
 
-    small {
-        font-size: 12px;
-    }
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    p {
-        font-size: 14px;
+      &:hover {
+        opacity: 0.85;
+      }
     }
   }
 
-  textarea, input {
-    background-color: unset;
+  &__leave-comment {
+    background: $light;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      font-size: 16px;
+      font-weight: 700;
+      color: $dark1;
+      margin-bottom: 16px;
+    }
+  }
+
+  .form-control {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: $bg1;
+    color: $dark1;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $primary;
+      background-color: $light;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .error-label {
+    color: #e53935;
+    font-size: 12px;
+    margin-top: 4px;
   }
 }

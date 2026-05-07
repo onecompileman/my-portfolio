@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcrumbBannerComponent } from './components/breadcrumb-banner/breadcrumb-banner.component';
 import { RouterModule } from '@angular/router';
+import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directive';
 
 
 
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     NavbarComponent,
     FooterComponent,
-    BreadcrumbBannerComponent
+    BreadcrumbBannerComponent,
+    AnimateOnScrollDirective
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     NavbarComponent,
     FooterComponent,
-    BreadcrumbBannerComponent
+    BreadcrumbBannerComponent,
+    AnimateOnScrollDirective
   ]
 })
 export class SharedModule { }

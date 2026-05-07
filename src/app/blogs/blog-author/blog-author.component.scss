@@ -1,51 +1,146 @@
 @import "../../../assets/scss/config.scss";
 .#{$style-prefix}-blogs {
-  &__author {
+  &__sidebar-card {
+    background: $light;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    padding: 24px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    .list-group {
-      a {
-        background-color: unset !important;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
-    &-image {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      align-items: start;
-      width: 120px;
-      height: 120px;
-      background-color: $light;
-      border-radius: 100%;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-      }
-    }
+    align-items: center;
 
     p {
       text-align: center;
       font-size: 14px;
-      line-height: 30px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
     }
   }
 
-  &__social-icons {
-    margin-top: 20px;
-    a {
-      margin-left: 10px;
-      margin-right: 10px;
+  &__sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+
+    span {
+      font-size: 15px;
+      font-weight: 700;
       color: $dark1;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__sidebar-header-line {
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(119, 17, 247, 1), rgba(45, 147, 254, 1));
+  }
+
+  &__author-image {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(119, 17, 247, 0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: $dark1;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  small {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  &__social-icons {
+    margin-top: 14px;
+    gap: 16px;
+
+    a {
+      color: #555;
+      font-size: 18px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__category-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+  }
+
+  &__category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $dark1;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba(119, 17, 247, 0.06);
+      color: $primary;
+    }
+  }
+
+  &__category-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: $primary;
+    background-color: rgba(119, 17, 247, 0.08);
+    border: 1px solid rgba(119, 17, 247, 0.2);
+    border-radius: 20px;
+    padding: 2px 9px;
+  }
+
+  .input-group {
+    .form-control {
+      border-radius: 8px 0 0 8px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      font-size: 14px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $primary;
+      }
+    }
+
+    .btn {
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
     }
   }
 }

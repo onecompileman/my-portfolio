@@ -9,7 +9,20 @@
         <div class="col-md-8 col-sm-12">
           <div class="oc-blogs__blog-content mt-3">
             <div class="oc-blogs__image-header">
-              <img [src]="blog.imageHeaderUrl" alt="Blog image header" />
+              <a
+                #headerImageLink
+                class="pswp-blog-image"
+                [href]="blog.imageHeaderUrl"
+                data-pswp-width="1200"
+                data-pswp-height="800"
+              >
+                <img
+                  #headerImage
+                  [src]="blog.imageHeaderUrl"
+                  alt="Blog image header"
+                  (load)="onHeaderImageLoad(headerImage, headerImageLink)"
+                />
+              </a>
             </div>
             <h2 class="mt-2">{{ blog.title }}</h2>
             <div class="d-flex">

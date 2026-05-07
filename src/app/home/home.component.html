@@ -1,12 +1,12 @@
 <div class="oc-home">
   <section class="oc-home__this-is-me">
     <div class="container d-flex">
-      <div class="oc-home__this-is-me-info">
+      <div class="oc-home__this-is-me-info animate__animated animate__fadeInLeft">
         <span>THIS IS ME</span>
         <h1>STEPHEN VINUYA</h1>
-        <p>Lead Angular Developer | Microsoft MVP (2019-2024) | Speaker</p>
+        <p>Senior Fullstack Developer | Microsoft MVP (2019-2024) | Speaker</p>
       </div>
-      <div class="oc-home__this-is-me-image">
+      <div class="oc-home__this-is-me-image animate__animated animate__fadeInRight animate__delay-hero-image">
         <div class="oc-home__this-is-me-imagebg"></div>
         <img src="assets/images/profile.png" alt="Profile" />
       </div>
@@ -15,122 +15,165 @@
 
   <section class="oc-home__about-me">
     <div class="container d-flex">
-      <div class="oc-home__about-me-image">
-        <div class="oc-home__about-me-imagebg"></div>
-        <img src="assets/images/profile-2.png" alt="Profile" />
-      </div>
-      <div class="oc-home__about-me-info">
+      <div class="oc-home__about-me-info"
+        animateOnScroll="animate__fadeInLeft">
         <span>ABOUT ME</span>
         <h2>PERSONAL DETAILS</h2>
         <p>
-          Hi, I'm Stephen Vinuya, currently working as a
-          <b>Lead Angular Developer</b>. I have been recognized as a
-          <b>Microsoft MVP for Developer Technologies</b>
-          from 2019 to 2024.
-          <br />
-          <br />
-          With over 8 years of experience in frontend development and 6 years in
-          leadership roles, I've honed my skills in web development and actively
-          share my expertise with the community. This includes delivering talks,
-          conducting bootcamps, and contributing to open-source projects.
+          Hi, I'm Stephen! I am a passionate <b>Full-stack Web Developer</b> who
+          specializes in <b>Angular (2–20)</b>, <b>TypeScript</b>, <b>.Net</b>, <b>Nest.JS</b>, <b>React</b>, <b>AWS Serverless</b>, and
+          <b>Firebase Cloud Functions</b>, with knowledge and hands-on experience
+          in cloud platforms such as <b>AWS</b>, <b>GCP</b>, and <b>Azure</b>.
+          <br /><br />
+          I am one of only <b>eight Microsoft MVPs in the Philippines</b> during
+          my tenure, honored for <b>five consecutive years (2019–2024)</b> in the
+          <b>Developer Technologies</b> category. This recognition reflects my
+          commitment to advancing the developer community and mentoring others
+          toward successful careers.
+          <br /><br />
+        
         </p>
         <a [routerLink]="['/about-me']" class="btn btn-primary ps-5 pe-5 mt-3"
           >Learn more</a
         >
       </div>
+      <div class="oc-home__about-me-highlights">
+        <div class="oc-home__about-me-highlight-card"
+          animateOnScroll="animate__fadeInUp" animateDelay="0s">
+          <fa-icon [icon]="['fas', 'desktop']" size="2x"></fa-icon>
+          <h4>Angular | .Net | Node.js </h4>
+          <p>10+ Years Fullstack<br />Development</p>
+        </div>
+        <div class="oc-home__about-me-highlight-card"
+          animateOnScroll="animate__fadeInUp" animateDelay="0.15s">
+          <fa-icon [icon]="['fas', 'microphone']" size="2x"></fa-icon>
+          <h4>80+ Talks</h4>
+          <p>Events &amp;<br />Conferences</p>
+        </div>
+        <div class="oc-home__about-me-highlight-card"
+          animateOnScroll="animate__fadeInUp" animateDelay="0.3s">
+          <fa-icon [icon]="['far', 'file']" size="2x"></fa-icon>
+          <h4>5× MVP Award</h4>
+          <p>Microsoft Developer<br />Technologies</p>
+        </div>
+        <div class="oc-home__about-me-highlight-card"
+          animateOnScroll="animate__fadeInUp" animateDelay="0.45s">
+          <fa-icon [icon]="['fas', 'message']" size="2x"></fa-icon>
+          <h4>5 Bootcamps</h4>
+          <p>Conducted &amp;<br />Instructed</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="oc-home__services">
-    <h2 class="mt-5">My Offered Services</h2>
-    <p>
-      As a <b>Lead Angular Developer</b> with over 8 years of experience and a
-      <b>5-time Microsoft MVP</b>, <br />I offer a range of professional
-      services to help businesses and individuals excel in web development:
+    <div class="oc-home__services-header" animateOnScroll="animate__fadeInDown">
+      <h2>My Offered Services</h2>
+      <div class="oc-home__services-header-line"></div>
+    </div>
+    <p animateOnScroll="animate__fadeInUp" animateDelay="0.1s">
+      As a <b>Senior Fullstack Developer</b> and <b>5-time Microsoft MVP</b>,
+      I offer a range of professional services to help businesses and
+      individuals excel in web development:
     </p>
 
     <div class="d-flex flex-wrap justify-content-center mt-4">
-      <div class="oc-home__services-item m-3">
-        <fa-icon [icon]="['fas', 'desktop']" size="2x"></fa-icon>
-        <h5 class="mt-2">Web Development</h5>
+      <div class="oc-home__services-item m-3"
+        animateOnScroll="animate__fadeInUp" animateDelay="0s">
+        <div class="oc-home__services-icon">
+          <fa-icon [icon]="['fas', 'desktop']" size="lg"></fa-icon>
+        </div>
+        <h5>Web Development</h5>
         <p>
-          Expertise in Angular (versions 2 to 18) to deliver robust, scalable,
-          and high-performance web applications tailored to your needs. Design
-          and implement clean, maintainable code using TypeScript, JavaScript,
-          and SCSS, ensuring both aesthetics and functionality.
+          Expertise in <b>Angular (2–20)</b>, <b>TypeScript</b>, <b>.Net</b>,
+          <b>Nest.JS</b>, <b>React</b>, <b>AWS Serverless</b>, and
+          <b>Firebase Cloud Functions</b> to deliver robust, scalable, and
+          high-performance web applications built on modern best practices.
         </p>
       </div>
-      <div class="oc-home__services-item m-3">
-        <fa-icon [icon]="['far', 'file']" size="2x"></fa-icon>
-        <h5 class="mt-2">Bootcamp Instructor</h5>
+      <div class="oc-home__services-item m-3"
+        animateOnScroll="animate__fadeInUp" animateDelay="0.2s">
+        <div class="oc-home__services-icon">
+          <fa-icon [icon]="['far', 'file']" size="lg"></fa-icon>
+        </div>
+        <h5>Bootcamp Instructor</h5>
         <p>
-          One of my key offerings is organizing intensive bootcamps that cater
-          to developers and teams aiming to fast-track their skills in Angular,
-          TypeScript, and modern web technologies.
+          Organizing intensive bootcamps for developers and teams to fast-track
+          their skills in Angular, TypeScript, and modern fullstack web
+          technologies.
         </p>
       </div>
-      <div class="oc-home__services-item m-3">
-        <fa-icon [icon]="['fas', 'microphone']" size="2x"></fa-icon>
-        <h5 class="mt-2">Speaker at events/conferences</h5>
+      <div class="oc-home__services-item m-3"
+        animateOnScroll="animate__fadeInUp" animateDelay="0.4s">
+        <div class="oc-home__services-icon">
+          <fa-icon [icon]="['fas', 'microphone']" size="lg"></fa-icon>
+        </div>
+        <h5>Speaker at Events </h5>
         <p>
-          Passionate about sharing knowledge, I offer technical talks,
-          bootcamps, and workshops for teams and developers who want to elevate
-          their skills in modern web development.
+          Delivering technical talks, workshops, and keynotes for developer
+          communities, helping teams elevate their skills in modern web
+          development and cloud technologies.
         </p>
       </div>
     </div>
   </section>
 
   <section class="oc-home__stats">
-    <div class="oc-home__stats-item">
+    <div class="oc-home__stats-item"
+      animateOnScroll="animate__zoomIn" animateDelay="0s">
       <h3 class="mb-0">63</h3>
       <span> Projects Completed </span>
     </div>
-    <div class="oc-home__stats-item">
+    <div class="oc-home__stats-item"
+      animateOnScroll="animate__zoomIn" animateDelay="0.2s">
       <h3 class="mb-0">5</h3>
       <span> Bootcamps Conducted </span>
     </div>
-    <div class="oc-home__stats-item">
+    <div class="oc-home__stats-item"
+      animateOnScroll="animate__zoomIn" animateDelay="0.4s">
       <h3 class="mb-0">80</h3>
       <span> Talks & Speaking conferences </span>
     </div>
   </section>
-  <section class="oc-home__projects">
-    <h2 class="mt-md-5 mt-sm-2">Featured Projects</h2>
-    <p>
+  <section class="oc-home__projects container">
+    <div class="oc-home__projects-header" animateOnScroll="animate__fadeInDown">
+      <h2>Featured Projects</h2>
+      <div class="oc-home__projects-header-line"></div>
+    </div>
+    <p animateOnScroll="animate__fadeInUp" animateDelay="0.1s">
       Throughout my career, I’ve had the privilege of working on a variety of
-      impactful and cutting-edge projects that showcase my expertise in <b>Angular,
-      TypeScript</b>, and modern web development technologies. <br> Each project reflects
-      my commitment to delivering high-quality solutions that meet client goals
-      and exceed expectations
+      impactful and cutting-edge projects that showcase my expertise in
+      <b>Angular (2–20)</b>, <b>TypeScript</b>, <b>.Net</b>, <b>Nest.JS</b>,
+      <b>React</b>, <b>AWS Serverless</b>, and <b>Firebase Cloud Functions</b>.
     </p>
-    <div class="d-flex justify-content-center oc-home__project-container">
-      <div class="oc-home__project-item m-2" *ngFor="let project of projects">
-        <div class="container d-flex flex-column">
-          <div class="d-flex align-items-center justify-content-center">
-            <carousel
-              class="oc-home__carousel"
-              [isAnimated]="true"
-              [interval]="0"
+    <div class="d-flex justify-content-center flex-wrap oc-home__project-container mt-4">
+      <div class="oc-home__project-item m-3"
+        animateOnScroll="animate__fadeInUp" *ngFor="let project of projects">
+        <carousel
+          class="oc-home__carousel"
+          [isAnimated]="true"
+          [interval]="0"
+        >
+          <slide *ngFor="let image of project.images">
+            <a
+              class="slide-item"
+              [href]="image.url"
+              [attr.data-pswp-width]="image.width"
+              [attr.data-pswp-height]="image.height"
             >
-              <slide *ngFor="let image of project.images">
-                <a
-                  class="slide-item"
-                  [href]="image.url"
-                  [attr.data-pswp-width]="image.width"
-                  [attr.data-pswp-height]="image.height"
-                >
-                  <img [src]="image.url" alt="Profile" width="480" />
-                </a>
-              </slide>
-            </carousel>
+              <img [src]="image.url" alt="Profile" />
+            </a>
+          </slide>
+        </carousel>
+        <div class="oc-home__project-item-info">
+          <h5>{{ project.name }}</h5>
+          <span class="oc-home__project-item-role">{{ project.role }}</span>
+          <div class="oc-home__project-item-tags">
+            <span
+              class="oc-home__project-item-tag"
+              *ngFor="let tech of project.techs.split(',')"
+            >{{ tech.trim() }}</span>
           </div>
-          <div class="oc-home__project-item-info">
-            <h5>{{ project.name }}</h5>
-            <b>{{ project.role }}</b>
-            <span>{{ project.techs }}</span>
-          </div>
-          <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
         </div>
       </div>
     </div>

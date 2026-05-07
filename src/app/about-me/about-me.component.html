@@ -3,47 +3,51 @@
     [banners]="banners"
     title="About Me"
   ></oc-breadcrumb-banner>
-  <section class="oc-about-me__about-me">
+
+  <section class="oc-about-me__about-me oc-about-me__about-me--profile">
     <div class="container d-flex">
-      <div class="oc-about-me__about-me-image">
-        <div class="oc-about-me__about-me-imagebg"></div>
+      <div class="oc-about-me__about-me-image" [animateOnScroll]="'animate__fadeInLeft'">
+        <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
         <img src="assets/images/profile-2.png" alt="Profile" />
       </div>
-      <div class="oc-about-me__about-me-info">
-        <span>ABOUT ME</span>
+      <div class="oc-about-me__about-me-info" [animateOnScroll]="'animate__fadeInRight'">
         <h2>PERSONAL DETAILS</h2>
         <p>
-          Hi, I'm Stephen Vinuya, currently working as a
-          <b>Lead Angular Developer</b>. I have been recognized as a
-          <b>Microsoft MVP for Developer Technologies</b>
-          from 2019 to 2024. With over 8 years of experience in frontend
-          development and 6 years in leadership roles, I've honed my skills in
-          web development and actively share my expertise with the community.
-          This includes delivering talks, conducting bootcamps, and contributing
-          to open-source projects.
-          <br />
-          <br />
-          Throughout my career, I've specialized in
-          <b>Angular (versions 2 to 18), TypeScript, SCSS, and JavaScript</b>.
-          Additionally, I have some experience with backend and cloud
-          technologies such as
-          <b>PHP, Node.js, .NET, and services like GCP, AWS, and Azure</b>.
+          Hi, I'm Stephen! I am a passionate <b>Full-stack Web Developer</b> who
+          specializes in <b>Angular (2–20)</b>, <b>TypeScript</b>, <b>.Net</b>, <b>Nest.JS</b>, <b>React</b>, <b>AWS Serverless</b>, and
+          <b>Firebase Cloud Functions</b>, with knowledge and hands-on experience
+          in cloud platforms such as <b>AWS</b>, <b>GCP</b>, and <b>Azure</b>.
+          <br /><br />
+          I am one of only <b>eight Microsoft MVPs in the Philippines</b> during
+          my tenure, honored for <b>five consecutive years (2019–2024)</b> in the
+          <b>Developer Technologies</b> category. This recognition reflects my
+          commitment to advancing the developer community and mentoring others
+          toward successful careers.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="oc-about-me__about-me">
+  <section class="oc-about-me__about-me oc-about-me__about-me--alt">
     <div class="container d-flex container-reverse">
-      <div class="oc-about-me__about-me-info me-md-5 ms-md-0">
+      <div class="oc-about-me__about-me-info me-md-5 ms-md-0" [animateOnScroll]="'animate__fadeInLeft'">
         <h2>Microsoft MVP</h2>
+        <!-- <div class="oc-about-me__stat-row">
+          <div class="oc-about-me__stat-badge" [animateOnScroll]="'animate__zoomIn'" [animateDelay]="'0.1s'">
+            <span class="oc-about-me__stat-value">5</span>
+            <span class="oc-about-me__stat-label">Consecutive Years</span>
+          </div>
+          <div class="oc-about-me__stat-badge" [animateOnScroll]="'animate__zoomIn'" [animateDelay]="'0.25s'">
+            <span class="oc-about-me__stat-value">8</span>
+            <span class="oc-about-me__stat-label">MVPs in PH</span>
+          </div>
+        </div> -->
         <p>
           The <b>Microsoft Most Valuable Professional (MVP)</b> award is given
           by Microsoft to "technology experts who passionately share their
           knowledge with the community". They are awarded to people who
           "actively share their technical expertise with the different
           technology communities related directly, or indirectly to Microsoft".
-
           <br /><br />
           I was awarded for 5 consecutive years for my passion and support to
           the community here in the Philippines, during the time that I was a
@@ -51,8 +55,7 @@
           the country
         </p>
       </div>
-      <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
-      <div class="d-flex align-items-center justify-content-center w-100">
+      <div class="d-flex align-items-center justify-content-center w-100" [animateOnScroll]="'animate__fadeInRight'">
         <carousel
           class="oc-about-me__carousel"
           [isAnimated]="true"
@@ -79,7 +82,7 @@
 
   <section class="oc-about-me__about-me">
     <div class="container d-flex">
-      <div class="d-flex align-items-center justify-content-center w-100">
+      <div class="d-flex align-items-center justify-content-center w-100" [animateOnScroll]="'animate__fadeInLeft'">
         <carousel
           class="oc-about-me__carousel"
           [isAnimated]="true"
@@ -171,107 +174,46 @@
           </slide>
         </carousel>
       </div>
-      <div class="oc-about-me__about-me-info">
+      <div class="oc-about-me__about-me-info" [animateOnScroll]="'animate__fadeInRight'">
         <h2>Local & International Speaker</h2>
+        <div class="oc-about-me__tags" [animateOnScroll]="'animate__fadeInUp'" [animateDelay]="'0.15s'">
+          <span class="oc-about-me__tag">NDC Sydney</span>
+          <span class="oc-about-me__tag">Programmer's Week Cognizant</span>
+          <span class="oc-about-me__tag">SOFCON PH</span>
+          <span class="oc-about-me__tag">PITCON</span>
+          <span class="oc-about-me__tag">DEVCON</span>
+        </div>
         <p>
           Since I was a Microsoft MVP, I'm doing talks, seminar and bootcamps
           locally and internationally. I have done numerous talks whether its
-          technical, or inspirational. Few highlights talks I did was on:
-          <b
-            >NDC Sydney, Programmer's Week Cognizant, SOFCON PH, PITCON,
-            DEVCON</b
-          >
-
+          technical, or inspirational.
           <br /><br />
           I'm very passionate sharing my experiences and expertise on the
           community, to help the new or old ones to jump start their career and
           learn new technologies.
         </p>
       </div>
-      <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
     </div>
   </section>
 
-  <section class="oc-about-me__about-me">
+  <section class="oc-about-me__about-me oc-about-me__about-me--alt">
     <div class="container d-flex container-reverse">
-      <div class="oc-about-me__about-me-info me-md-5 ms-md-0">
-        <h2>Car Enthusiast</h2>
+      <div class="oc-about-me__about-me-info me-md-5 ms-md-0" [animateOnScroll]="'animate__fadeInLeft'">
+        <h2>Achievements</h2>
         <p>
-          Apart from web development, I spend most of my money and time on cars.
-          Growing up, my father and I used to play <b>Gran Turismo</b> on the
-          PlayStation 1; it's one of the best memories I have with my dad. I
-          worked hard in my career to buy those fancy cars in real life.
-          <br /><br />
-          Now, I'm a member of <b>Mustang Enthusiast Philippines</b> and
-          <b>WRX/STI Philippines</b>. And every time there's a car meetup, I
-          always invite my dad. I know it's just a depreciating piece of metal,
-          but to me and my dad, it's a reminder of how far we have come in life.
+          One of my most memorable achievements in life is when I won the
+          <b>Accenture Program The Future 2016</b>. Most of the colleges in the
+          Philippines joined the competition, and out of 80 teams, my team won.
+          We were also featured on <b>CNN Philippines</b> and
+          <b>Umagang kay ganda</b>. <br />
+          <br />
+          I also won several programming competitions during my college days,
+          such as the C++ Competition and the UMAK IT Olympics Java Competition.
+          I finished my bachelor's degree in BSIT at National University as
+          <b>Magna Cum Laude</b>.
         </p>
       </div>
-      <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
-      <div class="d-flex align-items-center justify-content-center w-100">
-        <carousel
-          class="oc-about-me__carousel"
-          [isAnimated]="true"
-          [interval]="9999"
-        >
-          <slide>
-            <a
-              class="slide-item"
-              href="assets/images/car-1.jpeg"
-              data-pswp-width="4096"
-              data-pswp-height="2838"
-            >
-              <img src="assets/images/car-1.jpeg" alt="Profile" height="300" />
-            </a>
-          </slide>
-          <slide>
-            <a
-              class="slide-item"
-              href="assets/images/car-2.jpg"
-              data-pswp-width="2048"
-              data-pswp-height="1630"
-            >
-              <img src="assets/images/car-2.jpg" alt="Profile" height="300" />
-            </a>
-          </slide>
-          <slide>
-            <a
-              class="slide-item"
-              href="assets/images/car-3.jpg"
-              data-pswp-width="1669"
-              data-pswp-height="2048"
-            >
-              <img src="assets/images/car-3.jpg" alt="Profile" height="300" />
-            </a>
-          </slide>
-          <slide>
-            <a
-              class="slide-item"
-              href="assets/images/car-4.jpg"
-              data-pswp-width="2048"
-              data-pswp-height="1536"
-            >
-              <img src="assets/images/car-4.jpg" alt="Profile" height="300" />
-            </a>
-          </slide>
-          <slide>
-            <a
-              class="slide-item"
-              href="assets/images/car-5.jpg"
-              data-pswp-width="2048"
-              data-pswp-height="1536"
-            >
-              <img src="assets/images/car-5.jpg" alt="Profile" height="300" />
-            </a>
-          </slide>
-        </carousel>
-      </div>
-    </div>
-  </section>
-  <section class="oc-about-me__about-me">
-    <div class="container d-flex">
-      <div class="d-flex align-items-center justify-content-center w-100">
+      <div class="d-flex align-items-center justify-content-center w-100" [animateOnScroll]="'animate__fadeInRight'">
         <carousel
           class="oc-about-me__carousel"
           [isAnimated]="true"
@@ -337,27 +279,11 @@
           </slide>
         </carousel>
       </div>
-      <div class="oc-about-me__about-me-info">
-        <h2>Achievements</h2>
-        <p>
-          One of my most memorable achievements in life is when I won the
-          <b>Accenture Program The Future 2016</b>. Most of the colleges in the
-          Philippines joined the competition, and out of 80 teams, my team won.
-          We were also featured on <b>CNN Philippines</b> and
-          <b>Umagang kay ganda</b>. <br />
-          <br />
-          I also won several programming competitions during my college days,
-          such as the C++ Competition and the UMAK IT Olympics Java Competition.
-          I finished my bachelor's degree in BSIT at National University as
-          <b>Magna Cum Laude</b>.
-        </p>
-      </div>
-      <!-- <div class="oc-about-me__about-me-imagebg"></div> -->
     </div>
   </section>
 
   <section class="timeline pb-120 pt-5">
-    <div class="text-center">
+    <div class="text-center" animateOnScroll>
       <div class="menu-content pb-70">
         <div class="title text-center">
           <h2 class="mb-10">My Career Timeline</h2>
@@ -368,8 +294,8 @@
     <ul class="pb-3 mb-0">
       <li *ngFor="let experience of experiences">
         <div
-          class="content hidden d-flex flex-column align-items-center"
-          style="opacity: 1"
+          class="content d-flex flex-column align-items-center"
+          animateOnScroll
         >
           <h4 class="mb-0 pb-1">
             {{ experience.name }}
